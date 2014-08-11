@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>
+				Google
+		</title>
+		<link rel="stylesheet" href="reset.css" type="text/css">
+		<link rel="stylesheet" href="main.css" type="text/css">
+	</head>
+	<body>
+	<nav class="header">
+		<a href="http://www.google.com">+You </a>
+		<a href="http://www.google.com">Gmail </a>
+		<a href="http://www.google.com">Images</a>
+		<img src="images/grid.png"/>
+		<a class="sign-in" href="http://www.google.com"><span> Sign In </span></a>
+	</nav>
+
+	<div class="search-area">
+	
+		<img class="logo" src="images/google-logo.png"/>
+	
+		<input type="text" class="searchinput">
+		<img src="images/microphone.png">
+		<button class="search">Google Search</button>	
+		<button class="lucky">I'm Feeling Lucky</button>	
+
+	</div>
+
+	<div class="footer">
+		<span class="left-footer">
+			<a href="http://www.google.com">Advertising</a>
+			<a href="http://www.google.com">Business</a>
+			<a href="http://www.google.com">About</a>
+		</span>
+
+		<span class="right-footer">
+			<a href="http://www.google.com">Privacy & Terms</a>
+			<a href="http://www.google.com">Settings</a>
+		</span>
+	</div>
+
+	<footer>
+	</body
+
+</html>
