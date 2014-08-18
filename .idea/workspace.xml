@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c8a05974-19e1-4b54-87e4-47fa71f3c021" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GoogleClone/google-search-clone/index.html" afterPath="$PROJECT_DIR$/GoogleClone/google-search-clone/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css" afterPath="$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css" />
     </list>
     <ignored path="Thinkful.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c8a05974-19e1-4b54-87e4-47fa71f3c021" time="1408319637599" ignored="false" />
-    <file path="/main.css" changelist="c8a05974-19e1-4b54-87e4-47fa71f3c021" time="1408345450064" ignored="false" />
-    <file path="/index.html" changelist="c8a05974-19e1-4b54-87e4-47fa71f3c021" time="1408346495774" ignored="false" />
+    <file path="/main.css" changelist="c8a05974-19e1-4b54-87e4-47fa71f3c021" time="1408348004539" ignored="false" />
+    <file path="/index.html" changelist="c8a05974-19e1-4b54-87e4-47fa71f3c021" time="1408347832747" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,19 +70,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GoogleClone/google-search-clone/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.7017544">
+            <state line="17" column="55" selection-start="489" selection-end="489" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="32" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+            <state line="65" column="0" selection-start="968" selection-end="968" vertical-scroll-proportion="0.8376723">
               <folding />
             </state>
           </provider>
@@ -105,15 +106,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css" />
         <option value="$PROJECT_DIR$/GoogleClone/google-search-clone/index.html" />
+        <option value="$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="191" />
-    <option name="y" value="93" />
-    <option name="width" value="1413" />
+    <option name="x" value="59" />
+    <option name="y" value="2" />
+    <option name="width" value="1071" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -376,7 +377,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="191" y="93" width="1413" height="1080" extended-state="0" />
+    <frame x="59" y="2" width="1071" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -396,7 +397,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944486" sideWeight="0.73564464" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33399406" sideWeight="0.73564464" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -470,16 +471,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css">
+    <entry file="file://$PROJECT_DIR$/GoogleClone/google-search-clone/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="32" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+        <state line="17" column="55" selection-start="489" selection-end="489" vertical-scroll-proportion="-11.115385">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoogleClone/google-search-clone/index.html">
+    <entry file="file://$PROJECT_DIR$/GoogleClone/google-search-clone/files/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.7017544">
+        <state line="65" column="0" selection-start="968" selection-end="968" vertical-scroll-proportion="0.8376723">
           <folding />
         </state>
       </provider>

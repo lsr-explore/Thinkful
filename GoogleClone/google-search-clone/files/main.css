@@ -53,6 +53,18 @@ nav img {
     padding-right: 10px;
 }
 
+.app-tooltip {
+    display:inline;
+    position: relative;
+}
+
+.app-tooltip:hover:after {
+    content: attr(title);
+    color: #fff;
+    bacground: #999;
+}
+
+
 /*****************
 ***** Search *****
 *****************/
@@ -67,7 +79,7 @@ div img {
 }
 
 .logo {
-    margin-top: 20%;
+    margin-top:20%;
 	height: 95px;
 	width: 269px;
     padding-bottom: 25px;
