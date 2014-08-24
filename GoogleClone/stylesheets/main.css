@@ -1,0 +1,210 @@
+
+
+/*********************** custom settings *****************/
+/*****
+* { 
+  outline: 1px solid black;
+}
+****/
+
+html {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #666666;
+}
+
+/*****************
+***** Header *****
+*****************/
+
+.header {
+	display: block;
+	position: relative;
+	float: right;
+
+	margin-top: 15px;
+    padding-right:40px;
+}
+
+.header-links  {
+	text-decoration: none;
+	color: #666666; 
+
+	/* layout */
+	padding: 10px;
+
+}
+.header-links:hover {
+	text-decoration: underline;
+}
+
+.sign-in {
+	text-decoration: none;
+	cursor: default;
+
+    border: 1px solid black;
+
+    font-weight: bold;
+
+	color: #FFFFFF;
+	background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+
+	/* layout */
+	padding-left: 12px;
+    padding-right: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    height: 28px;
+    margin: 0;
+}
+
+.sign-in:hover {
+	text-decoration: none;
+}
+
+nav img {
+
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+    padding-right: 10px;
+}
+
+.app-tooltip {
+    display:inline;
+    position: relative;
+}
+
+.app-tooltip:hover:after {
+    content: attr(title);
+    color: #fff;
+    bacground: #999;
+}
+
+
+/*****************
+***** Search *****
+*****************/
+.search-area  {
+	/* size */
+	margin-left: auto;
+	margin-right: auto;
+    padding-top: 17%;
+
+	/* layout */
+    text-align: center;
+	display: block;
+}
+
+.logo-area {
+    text-align: center;
+}
+
+.logo {
+	/* size */
+	height: 95px;
+	width: 269px;
+    padding-bottom: 25px;
+}
+
+.search-input-area {
+	text-align: center;
+}
+
+.search-input {
+    border: dodgerblue solid 1px;
+    background: url("../images/microphone.png") no-repeat right center;
+
+	/* size */
+    background-size: 23px 20px;
+    width: 600px;
+    height: 20px;
+
+	/* layout */
+    margin-bottom: 20px;
+}
+
+.search-button-area {
+	text-align: center;
+}
+
+.search {
+	height: 30px;
+}
+
+
+.search:hover {
+    box-shadow: 0 2px 0 rgba(0,0,0,.15);
+
+}
+
+.lucky {
+    height: 30px;
+}
+
+
+.lucky:hover {
+    box-shadow: 0 2px 0 rgba(0,0,0,.15);
+
+}
+
+
+/*****************
+***** Footer *****
+*****************/
+
+.footer {
+	background-color: #F2F2F2;
+	border-top: 1px solid #E4E4E4;
+
+	/* size */
+	height: 40px;
+	width:100%;
+	bottom: 0px;
+
+	/* layout */
+	position: absolute;
+}
+
+.footer span {
+	/* size */
+	top: 25%;
+
+	/* layout */
+	position: relative;
+}
+
+.right-footer {
+	color: #666666; 
+
+	/* layout */
+	float: right;
+}
+
+.left-footer {
+	float: left;
+
+
+}
+
+.left-footer a{
+	color: #666666; 
+	text-decoration: none;
+
+	/* layout */
+	padding-left:20px;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.right-footer a{
+	color: #666666; 
+	text-decoration: none;
+
+	/* size */
+	padding-right:20px;
+}
+
