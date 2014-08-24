@@ -22,31 +22,49 @@ html {
 	display: block;
 	position: relative;
 	float: right;
+
 	margin-top: 15px;
     padding-right:40px;
 }
 
-.header a {
+.header-links  {
 	text-decoration: none;
 	color: #666666; 
+
+	/* layout */
 	padding: 10px;
+
 }
-.header a:hover {
+.header-links:hover {
 	text-decoration: underline;
 }
 
 .sign-in {
-	color: #FFFFFF;
+	text-decoration: none;
+	cursor: default;
+
+    border: 1px solid black;
+
     font-weight: bold;
+
+	color: #FFFFFF;
 	background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+
+	/* layout */
 	padding-left: 12px;
     padding-right: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
     height: 28px;
-    border: 1px solid black;
     margin: 0;
 }
 
+.sign-in:hover {
+	text-decoration: none;
+}
+
 nav img {
+
 	height: 20px;
 	width: 20px;
 	vertical-align: middle;
@@ -69,29 +87,46 @@ nav img {
 ***** Search *****
 *****************/
 .search-area  {
-    text-align: center;
-    display: block;
+	/* size */
+	margin-left: auto;
+	margin-right: auto;
+    padding-top: 17%;
 
+	/* layout */
+    text-align: center;
+	display: block;
 }
 
-div img {
+.logo-area {
     text-align: center;
 }
 
 .logo {
-    margin-top:20%;
+	/* size */
 	height: 95px;
 	width: 269px;
     padding-bottom: 25px;
 }
 
+.search-input-area {
+	text-align: center;
+}
+
 .search-input {
+    border: dodgerblue solid 1px;
     background: url("../images/microphone.png") no-repeat right center;
+
+	/* size */
     background-size: 23px 20px;
-    margin-bottom: 20px;
     width: 600px;
     height: 20px;
-    border: dodgerblue solid 1px;
+
+	/* layout */
+    margin-bottom: 20px;
+}
+
+.search-button-area {
+	text-align: center;
 }
 
 .search {
@@ -120,24 +155,31 @@ div img {
 *****************/
 
 .footer {
-	height: 40px;
 	background-color: #F2F2F2;
 	border-top: 1px solid #E4E4E4;
-	bottom: 0px;
-	position: absolute;
+
+	/* size */
+	height: 40px;
 	width:100%;
+	bottom: 0px;
+
+	/* layout */
+	position: absolute;
 }
 
 .footer span {
-	position: relative;
+	/* size */
 	top: 25%;
 
-
+	/* layout */
+	position: relative;
 }
 
 .right-footer {
-	float: right;
 	color: #666666; 
+
+	/* layout */
+	float: right;
 }
 
 .left-footer {
@@ -147,9 +189,11 @@ div img {
 }
 
 .left-footer a{
-	padding-left:20px;
-	text-decoration: none;
 	color: #666666; 
+	text-decoration: none;
+
+	/* layout */
+	padding-left:20px;
 }
 
 .footer a:hover {
@@ -157,8 +201,10 @@ div img {
 }
 
 .right-footer a{
-	padding-right:20px;
-	text-decoration: none;
 	color: #666666; 
+	text-decoration: none;
+
+	/* size */
+	padding-right:20px;
 }
 
