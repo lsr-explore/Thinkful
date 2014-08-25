@@ -1,0 +1,143 @@
+/**********************
+*** Debug
+***********************
+* {
+	outline: 1px solid black;
+}
+*****************/
+
+/****************************
+*** Variables
+*** Must view using Firefox
+****************************/
+:root {
+  --main-accent-color: #80afb2;
+}
+
+
+/****************************
+*** General
+****************************/
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+
+}
+
+h1 {
+	font-size:24px;
+	font-weight: bold;
+	
+}
+
+h2 {
+	font-size:24px;
+	font-weight: bold;
+	color: #80afb2; /* - Firefox - var(--main-accent-color);*/
+}
+
+li {
+	list-style-type: square;
+	list-style-position: inside;
+	display: list-item;
+
+}
+
+.tools-used {
+	margin-top: 20px;
+}
+
+
+/****************************
+*** Table - experience
+****************************/
+.table {
+	display:table;
+	border-collapse:coll;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top:20px;
+
+}
+
+.table-cell {
+	display:table-cell;
+	border: 1px solid #aaaaaa;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #80afb2; /* - Firefox - var(--main-accent-color);*/
+	color: #ffffff;
+	width: 33%;
+
+}
+
+.table-row {
+
+	display: table-row;
+
+}
+
+/****************************
+*** Header
+****************************/
+#header {
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background-color: #80afb2; /* - Firefox - var(--main-accent-color);*/
+	margin-bottom: 10px;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+}
+
+#linkedin-logo {
+	width: 30px;
+	height: 30px;
+
+}
+
+#email-contact {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/****************************
+*** Summary
+****************************/
+#summary {
+	
+	position: relative;
+	clear: left;
+	display: block;
+	margin: 2%;
+	width: 90%;
+}
+
+
+/****************************
+*** Experience
+****************************/
+
+
+#experience {
+	position: relative;
+	width: 95%;
+	margin: 2%;
+	clear:left;
+	display: block;
+}
+
+/****************************
+*** Education
+****************************/
+
+#education {
+	position: relative;
+	clear: left;
+	margin: 2%;
+	width: 95%;
+	display: block;
+}
+

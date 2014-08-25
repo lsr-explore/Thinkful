@@ -1,0 +1,120 @@
+
+
+/*********************** custom settings *****************/
+/*****
+* { 
+  outline: 1px solid black;
+}
+****/
+
+html {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #666666;
+}
+
+/*****************
+***** Header *****
+*****************/
+
+.header {
+	display: block;
+	position: relative;
+	float: right;
+	padding: 10px;
+}
+
+.header a {
+	text-decoration: none;
+	color: #666666; 
+	padding: 15px;
+}
+.header a:hover {
+	text-decoration: underline;
+}
+
+
+
+nav span {
+	color: #FFFFFF;
+	background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+	padding: 5px 15px 5px 15px;
+}
+
+nav img {
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+}
+
+/*****************
+***** Search *****
+*****************/
+
+.logo {
+	padding-top: 112px;
+	height: 95px;
+	width: 269px;
+
+}
+
+.search-area {
+	
+	display: block;
+	text-align: middle;
+
+}
+
+.search {
+	height: 30px;
+}
+
+
+/*****************
+***** Footer *****
+*****************/
+
+.footer {
+	height: 40px;
+	background-color: #F2F2F2;
+	border-top: 1px solid #E4E4E4;
+	bottom: 0px;
+	position: absolute;
+	width:100%;
+}
+
+.footer span {
+	position: relative;
+	top: 25%;
+
+
+}
+
+.right-footer {
+	float: right;
+	color: #666666; 
+}
+
+.left-footer {
+	float: left;
+
+
+}
+
+.left-footer a{
+	padding-left:20px;
+	text-decoration: none;
+	color: #666666; 
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.right-footer a{
+	padding-right:20px;
+	text-decoration: none;
+	color: #666666; 
+}
+
