@@ -1,0 +1,305 @@
+/**********************
+*** Debug
+***********************
+* {
+	outline: 1px solid black;
+}
+*****************/
+
+/****************************
+*** Variables
+*** Must view using Firefox
+****************************/
+:root {
+  --main-accent-color: #80afb2;
+}
+
+
+/****************************
+*** General
+****************************/
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+
+}
+
+h1 {
+	font-size:24px;
+	font-weight: bold;
+	
+}
+
+h2 {
+	font-size:24px;
+	font-weight: bold;
+	color: #88908a; /* - Firefox - var(--main-accent-color);*/
+}
+
+li {
+	list-style-type: square;
+	list-style-position: inside;
+	display: list-item;
+
+}
+
+.tools-used {
+	margin-top: 20px;
+}
+/****************************
+**** Timeline
+****  source: http://mattbango.com/notebook/code/pure-css-timeline/
+*****************************/
+.timeline {
+      margin-top: 20px;
+      margin-bottom: 10px;
+}
+ul.events {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+
+ul.events li {
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    border: 1px solid #ddd;
+    color: #707070;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    -moz-box-shadow: 0 0 10px 5px #bbb;
+    -webkit-box-shadow: 0 0 10px 5px #bbb;
+}
+
+ul.events li em {
+    color: #888;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+ul.intervals {
+
+    padding: 0;
+    display: block;
+}
+
+ul.intervals li {
+    list-style-type: none;
+}
+
+/* The width depends on the number of intervals. For example 100 / 7 = 14.29% -- then subtract a little bit for room for the borders */
+ul.intervals li {
+    border-right: 1px solid #ccc;
+    color: #999;
+    float: left;
+    font-size: 12px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    width: 3.17%;
+}
+
+ul.intervals li.first {
+    border-left: 1px solid #ccc;
+}
+
+.medical {
+    background: rgba(136, 144, 138, 0.32);
+}
+
+.media {
+    background: #8dd0f2;
+}
+
+.financial {
+    background: #b1e4c7;
+}
+
+#rovi {
+    width: 12%;
+    left: 85%;
+}
+
+#nodality {
+    width: 10%;
+    left: 75%;
+}
+
+#thermo {
+    width: 21%;
+    left: 55%;
+}
+
+#siemens {
+     width: 15%;
+     left: 42%;
+ }
+
+#kr-digital {
+    width: 6%;
+    left: 36%;
+}
+
+#ap {
+    width: 8%;
+    left: 32%;
+}
+
+#tudor {
+    width: 8%;
+    left: 30%;
+}
+#kr-finance {
+    width: 8%;
+    left: 28%;
+}
+#sony {
+    width: 12%;
+    left: 16%;
+}
+#dubner {
+    width: 16%;
+    left: 0%;
+}
+
+/****************************
+*** Table - experience
+****************************/
+.table {
+	display:table;
+	border-collapse:collapse;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top:20px;
+    -moz-box-shadow: 0 0 30px 5px #999;
+    -webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+.table-cell {
+	display:table-cell;
+	border: 1px solid #aaaaaa;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #88908a; /* - Firefox - var(--main-accent-color);*/
+	color: #ffffff;
+	width: 33%;
+
+}
+
+.table-row {
+
+	display: table-row;
+
+}
+
+/****************************
+*** Header
+****************************/
+#header {
+	z-index: 1;
+	position: relative;
+	width: 95%;
+	background-color: #88908a; /* - Firefox - var(--main-accent-color);*/
+	margin-bottom: 10px;
+    margin-left: 2%;
+	vertical-align: middle;
+	color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    -moz-box-shadow: 0 0 30px 5px #999;
+    -webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+#linkedin-logo {
+	width: 20px;
+	height: 20px;
+}
+
+#email-contact {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+div#headerLeft {
+    float: left;
+    margin-left: 10px;
+}
+
+img#profile {
+    float: left;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 2px;
+    padding: 2px;
+    border: 1px solid #bbb;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    width: 4%;
+}
+
+p#headerRight {
+    float: left;
+    margin-left: 40px;
+    line-height: 19px;
+}
+
+h1 {
+    font-size: 42px;
+    color: #ffffff;
+}
+
+p#caption {
+    margin-left: 3px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: #ccc;
+}
+
+
+/****************************
+*** Summary
+****************************/
+#summary {
+	
+	position: relative;
+	clear: left;
+	display: block;
+	margin: 2%;
+	width: 90%;
+}
+
+
+/****************************
+*** Experience
+****************************/
+
+
+#experience {
+	position: relative;
+	width: 95%;
+	margin: 2%;
+	clear:left;
+	display: block;
+}
+
+/****************************
+*** Education
+****************************/
+
+#education {
+	position: relative;
+	clear: left;
+	margin: 2%;
+	width: 95%;
+	display: block;
+}
+
