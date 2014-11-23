@@ -6,7 +6,7 @@
     <title>
         Laurie Reynolds Resume
     </title>
-    <link rel="stylesheet" href="stylesheets/reset.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/reset.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/resume-style.css" type="text/css">
 
 
