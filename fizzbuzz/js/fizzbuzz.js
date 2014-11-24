@@ -11,6 +11,7 @@ $(document).ready(function() {
         var validInput = verifyInput(limit);
         if (validInput )
         {
+            displayHeader(limit)
             runFizzBuzz(limit);
         }
     }
@@ -45,6 +46,10 @@ $(document).ready(function() {
 
     function displayResults(result) {
         $("#fizzbuzz").append("<p>" + result + "</p>");
+    }
+
+    function displayHeader(limit) {
+        $("#fizzbuzz").append("<p> Displaying Fizz Buzz results for values between 1 and " + limit + ".");
     }
 
     //~~~~~~~~~~~~~~~~~~~~~
