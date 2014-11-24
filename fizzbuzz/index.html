@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Fizz Buzz</title>
+</head>
+
+<body>
+<header>
+    <div class="inner">
+        <h1>Fizz Buzz</h1>
+        Fizz Buzz is a simple algorithm that evaluates all the numbers between 1 and a given limit for any numbers
+        divisible by 3 and/or 5.  <br>
+        Matches are indicated as follows:<br>
+        <ul>
+            <li>"Fizz" is output if a number is only divisible by 3</li>
+            <li>"Buzz is output if a number is only divisible by 5 </li>
+            <li>"FizzBuzz is output if a number is divisible by both 3 and 5</li>
+        </ul>
+        Example:  Given an upper limit of 15, the following would be output:    <br>
+        <b><i>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz </i>  </b>
+         <br><br>
+        See the Wikipedia entry on <a href="http://en.wikipedia.org/wiki/Fizz_buzz">Fizz Buzz</a> for more information
+        <br>
+        <hr>
+    </div>
+</header>
+<div >
+
+    <div class="data-input">
+        <h3>Enter a number between 1 and 100 </h3>
+        <input type="text" id="limit" value="1" style="text-align: right">
+        <input type="submit" id="submit" value="Submit">
+        <input type="submit" id="reset" value="Reset">
+
+    </div>
+    <div id="errorMessage"></div>
+
+    <div id="fizzbuzz">
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="./js/fizzbuzz.js"></script>
+
+</body>
+</html>
