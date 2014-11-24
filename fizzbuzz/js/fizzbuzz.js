@@ -5,7 +5,7 @@ $(document).ready(function() {
     // Main function
     //~~~~~~~~~~~~~~~~~~~~~
     function processInput(){
-        //clearResults();
+        clearResults();
         clearError();
         var limit = +($("#limit").val());
         var validInput = verifyInput(limit);
