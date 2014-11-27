@@ -10,15 +10,17 @@ function HotColdGame () {
     this.lastCloseness = 0,
     this.guessCount,
 
-     this.initialize = function() {
+    this.initialize = function() {
         lastGuess = 0;
         lastDiff = 0;
         lastCloseness = 0;
         guessCount = 0;
+        correctAnswer = 0;
+        this.guesses.length = 0;
     }
 
-    this.checkGuess = function(guess, match) {
-        var diff = Math.abs(match - guess);
+    this.checkGuess = function(guess) {
+        var diff = Math.abs(correctAnswer - guess);
         var closeness = 0;
 
         if (diff != 0) {
@@ -27,7 +29,7 @@ function HotColdGame () {
             } else if (diff > 10 && diff <= 20) {
                 closeness = 2;
             } else if (diff > 20 && diff <= 30) {
-                closness = 3;
+                closeness = 3;
             } else if (diff > 30 && diff <= 50) {
                 closeness = 4;
             } else {
@@ -64,5 +66,4 @@ function HotColdGame () {
 
         console.log(correctAnswer);
     }
-
 }

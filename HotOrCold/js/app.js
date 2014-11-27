@@ -1,24 +1,22 @@
 
 $(document).ready(function(){
 
-
     var responses = [];
     var game = new HotColdGame();
+    var previousGuesses = [];
 
-    initializeResponses();
-    newGame();
 
     function newGame() {
         game.initialize();
         game.generateRandomNumber();
-
+        previousGuesses.length = 0;
         clearFields();
-
+        displayFeedback("Guess a number between 1 and 100") ;
     }
 
     function initializeResponses() {
 
-        responses[0] = "You guessed it!"
+        responses[0] = " correct!  You guessed it!"
 
         responses[1] = "very hot";
         responses[2] = "hot";
@@ -26,17 +24,17 @@ $(document).ready(function(){
         responses[4] = "cold";
         responses[5] = "ice cold";
 
-        responses[10] = "very hot - closer";
-        responses[20] = "hot - closer";
-        responses[30] = "warm - closer";
-        responses[40] = "cold - closer";
-        responses[50] = "ice cold - closer";
+        responses[10] = "very hot - getting hotter";
+        responses[20] = "hot - getting hotter";
+        responses[30] = "warm - getting warmer";
+        responses[40] = "cold - getting warmer";
+        responses[50] = "ice cold - getting warmer";
 
-        responses[100] = "very hot - farther";
-        responses[200] = "hot - farther";
-        responses[300] = "warm - farther";
-        responses[400] = "cold - farther";
-        responses[500] = "ice cold - farther";
+        responses[100] = "very hot - getting colder";
+        responses[200] = "hot - getting colder";
+        responses[300] = "warm - getting colder";
+        responses[400] = "cold - getting colder";
+        responses[500] = "ice cold - getting colder";
     }
 
     function processInput(){
@@ -46,46 +44,51 @@ $(document).ready(function(){
         if (validInput )
         {
             guessCount ++;
-            var message = processGuess(guess)  ;
-            updateDisplay(guess, guessCount, message);
+            previousGuesses[guess] = 1;
 
+            var closeness = game.checkGuess(guess);
+            var message = responses[closeness];
+            message = guess + " is " + message;
+
+            updateDisplay(guess, guessCount, message);
         }
     }
 
-    function processGuess(guess) {
-
-        var closeness = game.checkGuess(guess, correctAnswer);
-
-        var message = responses[closeness];
-        message = message + " guess: " + guess + ", match: " + correctAnswer;
-        return message;
-
-    }
 
     //~~~~~~~~~~~~~~~~~~~~~
     // Verify Input
     //~~~~~~~~~~~~~~~~~~~~~
-    function verifyInput(guess)
-    {
+    function verifyInput(guess) {
         var errorString = "";
         var inputValid = true;
 
-        if (!$.isNumeric(guess)) {
-            errorString = guess + " is not a number. Please enter a number.";
+        if (previousGuesses[guess] === 1) {
+            errorString = "'" + guess + "' was already entered.  Please enter a different number.";
             inputValid = false;
-        }	else if (guess % 1 != 0) {
-            errorString = guess + " is not a whole number.  Please enter a whole number.";
-            inputValid = false;
-        } else if (guess < 1 || guess > 100) {
-            errorString = guess + " is outside the range.  Please enter a number between 1 and 100.";
-            inputValid = false;
+        } else {
+
+
+            if (!$.isNumeric(guess)) {
+                errorString = "'" + guess + "' is not a number. Please enter a number.";
+                inputValid = false;
+            } else if (guess % 1 != 0) {
+                errorString = "'" + guess + "' is not a whole number.  Please enter a whole number.";
+                inputValid = false;
+            } else if (guess < 1 || guess > 100) {
+                errorString = "'" + guess + "' is outside the range.  Please enter a number between 1 and 100.";
+                inputValid = false;
+            }
         }
 
         if (!inputValid) {
-            displayError(errorString);
+            displayFeedback(errorString);
         }
         return inputValid;
     }
+
+    //~~~~~~~~~~~~~~~~~~~~~
+    // Get UI Input
+    //~~~~~~~~~~~~~~~~~~~~~
 
     function getUserGuess() {
         var guess = $("#userGuess").val();
@@ -96,46 +99,61 @@ $(document).ready(function(){
     // UI Updates
     //~~~~~~~~~~~~~~~~~~~~~
 
-
     function clearFields()
     {
-        $("#userGuess").val('Enter your guess');
-        $("#count").text('0');
-        $("#guessList").text('');
-        $('#feedback').text('');
-    }
-
-    function addGuessToList(guess) {
-        $("ul#guessList").append("<li>" + guess + "</li>");
+        clearUserGuess();
+        clearCount();
+        clearGuessList();
+        clearFeedback();
     }
 
     function updateDisplay(guessVal, guessCountVal, message) {
-        $('#feedback').text(message);
-        addGuessToList(guessVal)   ;
-        $('#count').text(guessCountVal);
+        displayFeedback(message);
+        updateGuessList(guessVal)   ;
+        displayCount(guessCountVal);
+        clearUserGuess();
         setFocusUserGuess();
 
+    }
+
+    function clearFeedback() {
+        $('#feedback').text('');
+    }
+
+    function displayFeedback(message) {
+        $('#feedback').text(message);
+    }
+
+    function clearGuessList() {
+        $("#guessList").text('');
+    }
+
+    function updateGuessList(guess) {
+        $("ul#guessList").append("<li>" + guess + "</li>");
+    }
+
+    function clearCount()
+    {
+        $("#count").text('0');
+    }
+
+    function displayCount(guessCountVal){
+        $('#count').text(guessCountVal);
+    }
+
+    function clearUserGuess() {
+
+        $("#userGuess").val('');
+    }
+
+    function clearUserGuess() {
+        $("#userGuess").val('');
     }
 
     // Move focus to UserGuess
     function setFocusUserGuess() {
         document.getElementById("userGuess").focus();
     }
-
-
-        //~~~~~~~~~~~~~~~~~~~~~
-    // Manage errors
-    //~~~~~~~~~~~~~~~~~~~~~
-
-    function displayError(errorString) {
-        $("#guessList").append("<p style='color:red'><b><i>" + errorString + "</i></b></p>")   ;
-    }
-
-    function clearError()
-    {
-        $("#guessList").empty();
-    }
-
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~
     // Event Handlers
@@ -169,6 +187,16 @@ $(document).ready(function(){
     $("a.close").click(function(){
         $(".overlay").fadeOut(1000);
     });
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~
+    // Main
+    // ~~~~~~~~~~~~~~~~~~~~~~~~
+    function main() {
+        initializeResponses();
+        newGame();
+    }
+
+    main();
 });
 
 
