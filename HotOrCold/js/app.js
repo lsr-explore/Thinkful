@@ -1,40 +1,45 @@
 
-$(document).ready(function(){
 
+/* global res, HotColdGame, console : true */
+
+$(document).ready(function(){
+    "use strict";
     var responses = [];
     var game = new HotColdGame();
     var previousGuesses = [];
+    var guessCount = 0;
 
 
     function newGame() {
-        game.initialize();
-        game.generateRandomNumber();
+        var target = game.newGame();
+        console.log(target);
         previousGuesses.length = 0;
         clearFields();
-        displayFeedback("Guess a number between 1 and 100") ;
+        guessCount = 0;
+        displayFeedback(res.Prompt) ;
     }
 
     function initializeResponses() {
 
-        responses[0] = " correct!  You guessed it!"
+        responses[game.responses.FeedbackDone] = res.FeedbackDone;
 
-        responses[1] = "very hot";
-        responses[2] = "hot";
-        responses[3] = "warm";
-        responses[4] = "cold";
-        responses[5] = "ice cold";
+        responses[game.responses.FeedbackVeryHot] = res.FeedbackVeryHot;
+        responses[game.responses.FeedbackHot] = res.FeedbackHot;
+        responses[game.responses.FeedbackWarm] = res.FeedbackWarm;
+        responses[game.responses.FeedbackCold] = res.FeedbackCold;
+        responses[game.responses.FeedbackIceCold] = res.FeedbackIceCold;
 
-        responses[10] = "very hot - getting hotter";
-        responses[20] = "hot - getting hotter";
-        responses[30] = "warm - getting warmer";
-        responses[40] = "cold - getting warmer";
-        responses[50] = "ice cold - getting warmer";
+        responses[game.responses.FeedbackVeryHotHotter] = res.FeedbackVeryHotHotter;
+        responses[game.responses.FeedbackHotHotter] = res.FeedbackHotHotter;
+        responses[game.responses.FeedbackWarmWarmer] = res.FeedbackWarmWarmer;
+        responses[game.responses.FeedbackColdWarmer] = res.FeedbackColdWarmer;
+        responses[game.responses.FeedbackIceColdWarmer] = res.FeedbackIceColdWarmer;
 
-        responses[100] = "very hot - getting colder";
-        responses[200] = "hot - getting colder";
-        responses[300] = "warm - getting colder";
-        responses[400] = "cold - getting colder";
-        responses[500] = "ice cold - getting colder";
+        responses[game.responses.FeedbackVeryHotColder] = res.FeedbackVeryHotColder;
+        responses[game.responses.FeedbackHotColder] = res.FeedbackHotColder;
+        responses[game.responses.FeedbackWarmColder] = res.FeedbackWarmColder;
+        responses[game.responses.FeedbackColdColder] = res.FeedbackColdColder;
+        responses[game.responses.FeedbackIceColdColder] = res.FeedbackIceColdColder;
     }
 
     function processInput(){
@@ -63,19 +68,19 @@ $(document).ready(function(){
         var inputValid = true;
 
         if (previousGuesses[guess] === 1) {
-            errorString = "'" + guess + "' was already entered.  Please enter a different number.";
+            errorString = "'" + guess + "'" + res.ErrorDuplicate;
             inputValid = false;
         } else {
 
 
             if (!$.isNumeric(guess)) {
-                errorString = "'" + guess + "' is not a number. Please enter a number.";
+                errorString = "'" + guess + "'" + res.ErrorNotAWholeNumber;
                 inputValid = false;
-            } else if (guess % 1 != 0) {
-                errorString = "'" + guess + "' is not a whole number.  Please enter a whole number.";
+            } else if (guess % 1 !== 0) {
+                errorString = "'" + guess + "'" + res.ErrorNotNumber;
                 inputValid = false;
             } else if (guess < 1 || guess > 100) {
-                errorString = "'" + guess + "' is outside the range.  Please enter a number between 1 and 100.";
+                errorString = "'" + guess + "'" + res.ErrorOutsideRange;
                 inputValid = false;
             }
         }
@@ -91,7 +96,8 @@ $(document).ready(function(){
     //~~~~~~~~~~~~~~~~~~~~~
 
     function getUserGuess() {
-        var guess = $("#userGuess").val();
+        var guess;
+        guess = $("#userGuess").val();
         return guess;
     }
 
@@ -142,11 +148,6 @@ $(document).ready(function(){
     }
 
     function clearUserGuess() {
-
-        $("#userGuess").val('');
-    }
-
-    function clearUserGuess() {
         $("#userGuess").val('');
     }
 
@@ -171,7 +172,7 @@ $(document).ready(function(){
     // Key handlers
     $("#userGuess").keydown(function(event) {
         // Return key
-        if (event.keyCode == 13) {
+        if (event.keyCode === 13) {
             processInput();
             return false;
         }
