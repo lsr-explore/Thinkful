@@ -4,34 +4,120 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="js/app.js"></script>
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css"   >
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
-<div class="heading">
 
-<h1>Street Fighter  </h1>
-          <br>.<br>
-    <ul>
-<li>Select x to watch Ryu strike a pose  </li>
-<li>Watch out if you poke him with the mouse  </li>
-    </ul>
+<div class="row">
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <div id="content">
+
+
+                <a class="left-off-canvas-toggle list" href="#" id="menuToggle">Menu</a>
+                <header>
+                    <H1 class="list"> Shopping List</H1>
+                </header>
+
+
+                <!-- Off Canvas Menu -->
+                <aside class="left-off-canvas-menu">
+                    <div id="menuContainer">
+                        <!-- whatever you want goes here -->
+                        TBD - Instructions, menu items
+                        <ul>
+                            <li><a href="#">Add Category </a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+
+                <!-- main content goes here -->
+                <div class="overlay">
+                </div>
+
+                <div class="shopping">
+                    <div id="inputContainer">
+                        <div id="enterItemContainer">
+                            <input type="text" name="itemEntry" id="itemField" class="text" autocomplete="off"
+                                   placeholder="Enter item to buy" required/>
+                        </div>
+                        <div id="addItemContainer">
+                            <input type="submit" id="addItemButton" class="small round button" name="addItem" value="Add"/>
+                        </div>
+                    </div>
+
+                    <div id="listContainer">
+
+                        <ul id="shoppingList">
+                            <li class="item">
+                                <div>
+                                <div class="done">~</div>
+                                <span>item 1</span>
+                                <div class="delete">X</div>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <div>
+                                <div class="done">~</div>
+                                <span>item 2</span>
+                                <div class="delete">X</div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div>
+                                <div class="done">~</div>
+                                <span>item 3</span>
+                                <div class="delete">X</div>
+                    </div>
+                            </li>
+                            <h3 class="category list">Completed</h3>
+                            <li class="item">
+                                <div>
+                                <div class="done">/</div>
+                                <span>item 4</span>
+                                <div class="delete">X</div>
+                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- close the off-canvas menu -->
+            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>
+
 </div>
-<div class="main" >
 
-    <div class="ryu" tabindex="0">
-        <div class="ryu-still"></div>
-        <div class="ryu-ready"></div>
-        <div class="ryu-throwing"></div>
-        <div class="ryu-cool"></div>
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-6 columns">
+                <p>© Copyright - none</p>
+            </div>
+        </div>
     </div>
-    <div class="hadouken">
-    </div>
-    <div class="photographer">
-    </div>
+</footer>
 
-</div>
-<audio id="hadouken-sound" src="sound/hadouken.mp3"/>
+<script type="text/javascript"  src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript"  src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+<script type="text/javascript"  src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script>
+
+</script>
+
+
 </body>
 </html>

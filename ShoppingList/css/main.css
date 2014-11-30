@@ -8,7 +8,8 @@
 **** Common
 *******************/
 body {
-    background-color: black;
+    background-image: url('../images/vegetable-section-store-959019.jpg');
+    background-repeat: no-repeat;
 }
 
 *:focus
@@ -19,96 +20,99 @@ body {
 /******************
 **** Common
 *******************/
-.heading {
+
+
+#content
+{
+    padding:20px;
+    width:100%;
+    color:#FFFFFF;
+    position:relative;
+    float:left;
+    margin-left:20px;
+    overflow:hidden;
+}
+
+#content .overlay
+{
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    background-color:#000000;
+    width:100%;
+    height:1500px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:-1;
+}
+
+.shopping
+{
+    position:relative;
+}
+
+.category {
     color: white;
-    margin-left: 40%;
-    font-family: Arial, sans-serif;
+
+}
+
+#menuContainer {
+    color: #ffffff;
+    margin: 5,5,5,5;
+    background: deeppink;
+}
+
+#inputContainer {
+    width: 100%;
+}
+
+#enterItemContainer {
+    width: 70%;
+    float: left;
+}
+
+#addItemContainer {
+    margin: 5,5,5,5;
+    width: 20%;
+    float: right;
+}
+
+#listContainer {
+   clear:both;
+}
+
+#menuToggle {
+    color: #ffffff;
 }
 
 h1 {
     font-size: 36pt;
+    color: #ffffff;
 }
 
 li {
-    list-style: square;
-    color:white;
+    list-style: none;
+    color:black;
     font-size: 15pt;
+    background-color: palegoldenrod;
+    cursor: pointer;
+    width: 70%;
 }
 
-/******************
-**** Main
-*******************/
-.main {
-    background-color: #c2c2c2;
-    margin-top: 110px;
-    padding-left: 100px;
-    min-width: 1200px;
-    height: 500px;
-}
-
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .photographer {
-    background-repeat: no-repeat;
-}
-
-/******************
-**** Left
-*******************/
-
-.ryu {
+.done {
+    background: white;
+    width: 5%;
+    height: 100%;
     float: left;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
-    width: 659px;
-    height: 494px;
+.delete {
+    background: white;
+    width: 5%;
+    height: 100%;
+    float: right;
 }
 
-.ryu-ready, .ryu-throwing, .ryu-cool, .photographer {
-    display: none;
-}
-
-.ryu-ready {
-    background-image: url('../images/ryu-ready-position.gif');
-}
-
-.ryu-still {
-    background-image: url('../images/ryu-standing-still.png');
-}
-
-.ryu-throwing {
-    background-image: url('../images/ryu-throwing-hadouken.png');
-}
-
-.ryu-cool {
-    background-image: url('../images/ryu-cool.gif');
-}
-
-/******************
-**** Photographer
-*******************/
-.photographer {
-    background-image: url('../images/photographer.jpg');
-    top: 167px;
-    left: -5px;
-    float: left;
-    width: 500px;
-    height: 300px;
-    /*display: none;*/
-    position: relative;
-}
-
-/******************
-**** hadouken
-*******************/
-.hadouken {
-    background-image: url('../images/hadouken.gif');
-    width: 156px;
-    height: 90px;
-    /*display: none;*/
-    position: relative;
-    top: 167px;
-    left: -212px;
-    float: left;
-}
 
 

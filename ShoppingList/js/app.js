@@ -1,73 +1,105 @@
 $(document).ready(function() {
-
-    $('.hadouken').hide();
-    $('.ryu-throwing').show();
-    $('.ryu-throwing').hide();
+    "use strict";
 
 
-    /**************
-     * Mouse Events
-     */
-    $('.ryu').mouseenter(function() {
-        $('.ryu-still').hide();
-        $('.ryu-ready').show();
+
+    $("#addItemButton").on("click", function() {
+        event.preventDefault();
+        handleAddEvent();
     });
 
-    $('.ryu').mouseleave(function() {
-        $('.ryu-ready').hide();
-        $('.ryu-still').show();
-    });
-
-    $('.ryu').mousedown(function() {
-        playHadouken();
-        $('.ryu-ready').hide();
-        $('.ryu-throwing').show();
-        $('.hadouken').show()
-        .animate(
-            {'left': '300px'},
-            500,
-            function() {
-                $(this).hide();
-                $(this).css('left', '-212px');
-            }
-        );
-    }) ;
-
-    $('.ryu').mouseup(function() {
-        $('.ryu-throwing').hide();
-        $('.ryu-ready').show();
-
-    });
-
-    /**************
-     * Key Events
-     * 88 = x
-     */
-
-    $(document).keydown(function(e) {
-        if(e.which == 88) {
-            $('.ryu-still').hide();
-            $('.ryu-ready').hide();
-            $('.ryu-cool').show();
-            $('.photographer').show();
+    // Key handlers
+    $("#itemField").keydown(function(event) {
+        // Return key
+        if (event.keyCode === 13) {
+            handleAddEvent();
+            return false;
         }
     });
 
-    $(document).keyup( function(e) {
-        if(e.which == 88) {
-            $('.ryu-cool').hide();
-            $('.photographer').hide();
-            $('.ryu-still').show();
+
+    /*--- Check off the items ---*/
+    $('#shoppingList').on('click', 'div.done', checkoff);
+
+    /*--- Delete the item ---*/
+    $('#shoppingList').on('click', 'div.delete', deleteItem);
+
+
+    /*--- Delete Function ---*/
+    function deleteItem(){
+        console.log("Deleting...");
+        if($(this).parent().hasClass("checked")) {
+
+            $(this).parent().slideUp('slow', function(){
+                $(this).remove();
+            });
+            console.debug($(this).parent());
+            return false;
+        } else {
+
+            $(this).parent().slideUp('slow', function(){
+                $(this).remove();
+            });
+            console.debug($(this).parent());
+            return false;
         }
-    });
-})
 
-/**************
- * Audio
- */
+    }
 
-function playHadouken () {
-    $('#hadouken-sound')[0].volume = 0.5;
-    $('#hadouken-sound')[0].load();
-    $('#hadouken-sound')[0].play();
-}
+    /*--- Check off Function ---*/
+    function checkoff(){
+        console.log("Checking Off...");
+        if($(this).hasClass("checked")) {
+            $(this).slideUp('slow', function(){
+                $(this).slideDown('slow').prependTo('#shoppingList');
+            });
+            console.debug($(this));
+
+        } else {
+            $(this).slideUp('slow', function(){
+                $(this).slideDown('slow').appendTo('#shoppingList');
+            });
+            console.debug($(this));
+
+        }
+        $(this).toggleClass("checked");
+
+    }
+
+    /*--- Add the new item to the list and increase the count ---*/
+    function addItem(item) {
+
+        $('<li class="item"><div class="done">~</div><span">' + item + '</span><div class="delete">X</div></li>').hide().prependTo('#shoppingList').slideDown('slow');
+        console.log("You have now added " + item + "!");
+        setFocus();
+    }
+
+    function handleAddEvent() {
+
+        event.preventDefault();
+
+        var newItem = $.trim($('#itemField').val());
+        if (newItem === '') {
+            setFocus();
+        } else{
+            addItem(newItem);
+        }
+
+    }
+
+    /*--- Clear and Set focus to the inputbox ---*/
+    function setFocus() {
+        $('#itemField').val('');
+        document.getElementById("itemField").focus();
+    }
+
+
+    function main() {
+        $(document).foundation().foundation('joyride' , 'start');
+        var shoppingList = $("#shoppingList");
+        shoppingList.sortable();
+    }
+
+    main();
+
+}) ;
