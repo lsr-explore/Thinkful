@@ -4,14 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8a05974-19e1-4b54-87e4-47fa71f3c021" name="Default" comment="Added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HotOrCold/test/HotColdGame.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HotOrCold/test/MathUtils.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HotOrCold/test/Resources.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HotOrCold/test/app.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Thinkful.iml" afterPath="$PROJECT_DIR$/Thinkful.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShoppingList/index.html" afterPath="$PROJECT_DIR$/ShoppingList/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShoppingList/mobile.html" afterPath="$PROJECT_DIR$/ShoppingList/mobile.html" />
+    <list default="true" id="c8a05974-19e1-4b54-87e4-47fa71f3c021" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StackOverflow/images/stack-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ajax/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StackOverflow/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ajax/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StackOverflow/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StackOverflow/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ajax/js/moment.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Thinkful.iws" />
@@ -75,43 +75,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ShoppingList/index.html">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StackOverflow/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.682243" vertical-offset="1189" max-vertical-offset="1938">
-              <caret line="100" column="92" selection-start-line="100" selection-start-column="92" selection-end-line="100" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.7446808" vertical-offset="816" max-vertical-offset="3230">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StackOverflow/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.538462" vertical-offset="311" max-vertical-offset="1207">
+              <caret line="39" column="44" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShoppingList/css/main.css">
+        <entry file="file://$PROJECT_DIR$/StackOverflow/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-46.24" vertical-offset="0" max-vertical-offset="2567">
-              <caret line="68" column="33" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShoppingList/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1223" max-vertical-offset="2669">
-              <caret line="147" column="20" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="20" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShoppingList/mobile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.576923" vertical-offset="1130" max-vertical-offset="1938">
-              <caret line="101" column="56" selection-start-line="101" selection-start-column="56" selection-end-line="101" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1054">
+              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -154,6 +142,11 @@
         <option value="$PROJECT_DIR$/ShoppingList/css/main.css" />
         <option value="$PROJECT_DIR$/ShoppingList/mobile.html" />
         <option value="$PROJECT_DIR$/ShoppingList/index.html" />
+        <option value="$PROJECT_DIR$/Ajax/js/app.js" />
+        <option value="$PROJECT_DIR$/Ajax/index.html" />
+        <option value="$PROJECT_DIR$/StackOverflow/index.html" />
+        <option value="$PROJECT_DIR$/StackOverflow/css/main.css" />
+        <option value="$PROJECT_DIR$/StackOverflow/js/app.js" />
       </list>
     </option>
   </component>
@@ -162,10 +155,10 @@
     <config-path />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="141" />
+    <option name="x" value="28" />
+    <option name="y" value="247" />
     <option name="width" value="1720" />
-    <option name="height" value="934" />
+    <option name="height" value="933" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -223,7 +216,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ShoppingList" />
+              <option name="myItemId" value="StackOverflow" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,7 +230,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ShoppingList" />
+              <option name="myItemId" value="StackOverflow" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -255,61 +248,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ShoppingList" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Thinkful" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Thinkful" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShoppingList" />
+              <option name="myItemId" value="StackOverflow" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Thinkful" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Thinkful" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotOrCold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Thinkful" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Thinkful" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotOrCold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +538,7 @@
       <workItem from="1417215607995" duration="5448000" />
       <workItem from="1417287454403" duration="15440000" />
       <workItem from="1417322165560" duration="170000" />
-      <workItem from="1417386382427" duration="12407000" />
+      <workItem from="1417386382427" duration="22252000" />
     </task>
     <task id="LOCAL-00001" summary="Adding streetfighter project">
       <created>1416785939262</created>
@@ -649,11 +592,15 @@
       <created>1417398870989</created>
       <updated>1417398870989</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Swapped functionality - mobile html shows drag and drop, but not deleting or marking as complete">
+      <created>1417399569995</created>
+      <updated>1417399569995</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75072000" />
+    <option name="totallyTimeSpent" value="84917000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -676,7 +623,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="141" width="1720" height="934" extended-state="0" />
+    <frame x="28" y="247" width="1720" height="933" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -765,7 +712,8 @@
     <MESSAGE value="shoppingList- prototype" />
     <MESSAGE value="Added meta tag to support responsive layout" />
     <MESSAGE value="Clean ups - added placeholder for the menu and commented code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean ups - added placeholder for the menu and commented code" />
+    <MESSAGE value="Swapped functionality - mobile html shows drag and drop, but not deleting or marking as complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swapped functionality - mobile html shows drag and drop, but not deleting or marking as complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -777,47 +725,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ShoppingList/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1887">
-          <caret line="66" column="51" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShoppingList/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotOrCold/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1343">
-          <caret line="15" column="80" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotOrCold/test/MathUtils.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="272">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotOrCold/js/MathUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="425">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HotOrCold/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1343">
@@ -1114,36 +1021,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShoppingList/js/app.js">
+    <entry file="file://$PROJECT_DIR$/ShoppingList/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1223" max-vertical-offset="2669">
-          <caret line="147" column="20" selection-start-line="147" selection-start-column="20" selection-end-line="147" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-26.666666" vertical-offset="0" max-vertical-offset="1938">
+          <caret line="80" column="75" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShoppingList/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-46.24" vertical-offset="0" max-vertical-offset="2567">
-          <caret line="68" column="33" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5045161" vertical-offset="0" max-vertical-offset="2567">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShoppingList/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23375" vertical-offset="0" max-vertical-offset="2669">
+          <caret line="11" column="13" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShoppingList/mobile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.576923" vertical-offset="1130" max-vertical-offset="1938">
+        <state vertical-scroll-proportion="0.75839794" vertical-offset="1130" max-vertical-offset="1938">
           <caret line="101" column="56" selection-start-line="101" selection-start-column="56" selection-end-line="101" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShoppingList/index.html">
+    <entry file="file://$PROJECT_DIR$/Ajax/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.682243" vertical-offset="1189" max-vertical-offset="1938">
-          <caret line="100" column="92" selection-start-line="100" selection-start-column="92" selection-end-line="100" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.30749354" vertical-offset="0" max-vertical-offset="774">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ajax/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9575" vertical-offset="169" max-vertical-offset="1037">
+          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StackOverflow/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1054">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StackOverflow/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.538462" vertical-offset="311" max-vertical-offset="1207">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StackOverflow/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7446808" vertical-offset="816" max-vertical-offset="3230">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
