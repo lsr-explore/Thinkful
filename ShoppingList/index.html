@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"/>
     <title></title>
     <link rel="stylesheet" href="css/reset.css">
-
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
     <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,49 +13,67 @@
 </head>
 <body>
 
+
+<div id="headerArea">
+    <div id="innerHeaderArea">
+
+    <img src="images/shoppingcart.jpg"  >
+
+    <H1> Fill the Basket</H1>
+    </div>
+</div>
+
+<div id="imgArea">
+   &nbsp;
+</div>
+
+
+
+
 <div class="row" id="mainContainer">
-    <div class="off-canvas-wrap" data-offcanvas>
-        <div class="inner-wrap">
+
+    <div id="overlay">    &nbsp;
+    </div>
+    <div id="appArea" class="off-canvas-wrap" data-offcanvas>
+
+        <div id="innerArea" class="inner-wrap">
             <div id="contentContainer">
 
-
                 <a class="left-off-canvas-toggle list" href="#" id="menuToggle">Menu</a>
-                <header>
-                    <H1 class="list"> Shopping List</H1>
-                </header>
-
 
                 <!-- Off Canvas Menu -->
-                <aside class="left-off-canvas-menu">
+                <aside  class="left-off-canvas-menu">
                     <div id="menuContainer">
+                        <div id="menuHeader">
                         <!-- whatever you want goes here -->
                         TBD - Instructions, menu items
                         <br>   <br>
                         Type "test" to load a test shopping list
                         <hr>
+                        </div>
+                        <div id="menuOptions"   >
                         Options (future)
                         <ul id="optionsList">
                             <li>Save current list</li>
                             <li>Manage categories</li>
                             <li>Manage saved lists</li>
                         </ul>
+                        </div>
                     </div>
                 </aside>
 
 
                 <!-- main content goes here -->
-                <div class="overlay">
-                </div>
 
-                <div class="shoppingContainer">
+
+                <div id="shoppingContainer">&nbsp;
                     <div id="inputContainer">
                         <div id="enterItemContainer">
                             <input type="text" name="itemEntry" id="itemField" class="text" autocomplete="off"
                                    placeholder="Enter item to buy" required/>
                         </div>
                         <div id="addItemContainer">
-                            <input type="submit" id="addItemButton" class="small round button" name="addItem"
-                                   value="Add"/>
+                            <input type="submit" id="addItemButton" class="small round button"  value="Add"/>
                         </div>
                     </div>
 
@@ -69,34 +87,31 @@
 
 
                         </ul>
-
-                        </ul>
                     </div>
                 </div>
-            </div>
+
             <!-- close the off-canvas menu -->
             <a class="exit-off-canvas"></a>
-
+            </div>
         </div>
     </div>
 
 </div>
 
-<footer class="row">
-    <div class="large-12 columns">
-        <hr/>
-        <div class="row">
-            <div class="large-6 columns">
-                <p>© Copyright - none</p>
+<div id="footerArea">
+            <div id="copyrightArea">
+                <span id="copyright">© Copyright - Golgi Studio</span>
             </div>
-        </div>
-    </div>
-</footer>
+</div>
+
+<!-- Need this so it won't display loading at the bottom of the page -->
+<div class='ui-loader ui-body-a ui-corner-all'><span class='ui-icon ui-icon-loading spin'></span><h1></h1></div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- Conflict between jquery mobile and jquery ui - multiple button labels appeared -->
+<!--<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
 <script type="text/javascript" src="http://cdn.foundation5.zurb.com/foundation.js"></script>
 <script type="text/javascript" src="js/app.js"></script>

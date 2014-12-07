@@ -7,75 +7,182 @@
 /******************
 **** Common
 *******************/
-body {
-    background-image: url('../images/vegetable-section-store-small.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
 *:focus
 {
     outline: none;
 }
 
-/* Headings and menus */
+/******************
+**** Header
+*******************/
+#headerArea {
+
+
+    width: 100%;
+    height: 60px;
+    top: 5px;
+    position: fixed;
+
+
+}
+
+#innerHeaderArea {
+
+
+    width: 250px;
+    margin: 0 auto;
+
+
+    border: 2px solid;
+    border-radius: 25px;
+    background-color: white;
+    border-color: white;
+
+}
+
+#innerHeaderArea img {
+
+
+    float: left;
+    width: 10%;
+    height: 10%;
+    margin: 5px;
+
+
+}
+
+h1 {
+
+
+    text-align: center;
+
+
+    font-size: 24pt;
+    color: Black;
+
+}
+
+/******************
+**** Background
+*******************/
+#imgArea {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: -10;
+
+
+    background-color: blue;
+    background-image: url("../images/vegetable-section-store-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#overlay
+{
+
+    z-index:-1;
+    position: fixed;
+    top: 100px;
+    bottom: 60px;
+    left:5%;
+    right: 5%;
+
+
+    border: 2px solid;
+    border-radius: 25px;
+    border-color: black;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    background-color:black;
+
+}
+
+
+
+
 .category {
+
+
     color: white;
 }
 
 #menuToggle {
+
+
     color: white;
 }
 
-h1 {
-    font-size: 36pt;
-    color: white;
-}
+
 
 #optionsList {
+
+
     list-style: circle;
     color: white;
 }
 
 
 /*  Containers */
-#mainContainer
+#appArea
 {
-    width: 100%;
-    height: 80%;
+    position: fixed;
+    top: 100px;
+    bottom: 60px;
+    left: 5%;
+    right: 5%;
+}
+
+#innerArea {
+
+    color:white;
+
 }
 
 #contentContainer
 {
-    width:100%;
+
+
+    margin-top: 30px;
+    margin-left: 30px;
+
+
+}
+
+
+
+#shoppingContainer
+{
+    width: 100%;
     height: 100%;
-    color:white;
-    padding:5px;
-    overflow:hidden;
+
+
 }
 
-#contentContainer .overlay
-{
-    opacity:0.5;
-    filter:alpha(opacity=50);
-    -moz-opacity:0.5;
-    background-color:#000000;
-    width:100%;
-    height:90%;
-    position:absolute;
-    top:0px;
-    left:0px;
-    z-index:-1;
-}
 
-.shoppingContainer
-{
-    position:relative;
-}
 
 #menuContainer {
     color: white;
-    margin: 5px;
+
+}
+
+#menuOptions {
+
+    margin-left: 20px;
+}
+
+#menuHeader {
+
+    margin-top: 20px;
+    margin-left: 20px;
+
 }
 
 #inputContainer {
@@ -83,7 +190,7 @@ h1 {
 }
 
 #enterItemContainer {
-    width: 50%;
+    width: 40%;
     float: left;
 }
 
@@ -93,52 +200,146 @@ h1 {
     float: left;
 }
 
+/* Shopping list lists */
+
 #listContainer {
    clear:both;
+
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: palegoldenrod;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4);
+}
+
+ul#shoppingList {
+    overflow-y: auto;
+    max-height: 200px;
+    min-height: 100px;
+    width: 80%;
+    display: inline-block;
+
+}
+
+ul#purchasedList {
+    overflow-y: auto;
+    max-height: 200px;
+    min-height: 100px;
+    width: 80%;
+    display: inline-block;
+
+
+
+
 }
 
 /*
 Shopping and Purchased List items
 */
 .item {
+
+    width: 100%%;
+    font-size: 15pt;
+
+    /* Colors and Styles */
     list-style: none;
     color:black;
-    font-size: 15pt;
+
     background-color: palegoldenrod;
     cursor: pointer;
-    width: 70%;
 }
 
 .todo {
-    background: white;
+
     width: 5%;
     height: 100%;
     float: left;
+    background-size: 55%;
+    background-position: center;
+
+
+    background-color: white;
     background-image: url("../images/media-record-2x.png");
     background-repeat: no-repeat;
-    background-size: 60%, 60%;
-    background-position: center;
+
+
+}
+
+li span {
+    margin-left: 10px;
 }
 
 .done {
-    background: white;
+
     width: 5%;
     height: 100%;
     float: left;
+    background-size: 55%;
+    background-position: center;
+
+
+    background-color: white;
     background-image: url("../images/circle-check-2x.png");
     background-repeat: no-repeat;
-    background-size: 60%, 60%;
-    background-position: center;
 }
 
 .delete {
     width: 5%;
     height: 100%;
     float: right;
+    background-size: 55%;
+    background-position: center;
+
     background-image: url("../images/trash-2x.png") ;
     background-repeat: no-repeat;
-    background-size: 60%, 60%;
-    background-position: center;
+
+}
+
+
+/******************
+**** Footer
+*******************/
+#footerArea {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+
+
+    color: white;
+    border-top-color: black;
+
+}
+
+#copyrightArea {
+
+    height: 100%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+
+
+    background-color: rgba(0,0,0,0.15);
 }
 
 

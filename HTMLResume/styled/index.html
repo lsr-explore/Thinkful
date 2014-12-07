@@ -1,334 +1,110 @@
-<!Doctype html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="images/lsr-resume-32.ico" type="image/x-icon" />
-    <title>
-        Laurie Reynolds Resume
-    </title>
-    <link rel="stylesheet" href="../../stylesheets/reset.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/resume-style.css" type="text/css">
-
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Online Responsive Resume Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
 </head>
 
 <body>
+	<div id="w" itemscope itemtype="http://schema.org/Person">
+		<header class="clearfix">
+			<div id="info">			
+				<h1><span itemprop="name">Jake Rocheleau</span></h1>
+				<h3><span itemprop="jobTitle">Freelance Writer &amp; Web Developer</span></h3>
+				<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				  <span itemprop="addressLocality">Hudson</span>, 
+				  <span itemprop="addressRegion">Massachusetts</span>, 
+				  <span itemprop="addressCountry">USA</span>
+				</small>
+				<small><span itemprop="email">jakerocheleau@gmail.com</span></small>
+				<small><a href="http://byjakewithlove.com/" itemprop="url">My Portfolio</a> &bull; <a href="http://twitter.com/jakerocheleau" itemprop="url">@jakerocheleau</a></small>
+			</div>
+			
+			<div id="photo">
+				<img src="images/jake-rocheleau-250.jpg" alt="Jake Rocheleau resume photo avatar" itemprop="image" />
+			</div>
+		</header>
+		
+		<section id="profile">
+			<h2>My History &amp; Profile</h2>
+			<p itemprop="description">I'm a 21 year old web designer and developer working out of eastern Massachusetts. I have been coding websites ever since sophomore year of high school in my first web design class. Fast-forward a few years later I was landing freelance projects most of my junior and senior years. During this time I was also working part-time at Best Buy's Geek Squad division.</p>
+			
+			<p>After graduating High School in summer 2009 I started writing on various web design blogs along with launching my own startup ideas. A few months later in September 2009 I spent a couple months studying at <a href="http://www.wpi.edu/">Worcester Polytechnic Institute</a> in Worcester, Massachsuetts. However I left in January 2010 to pursue a career on my own. I now work doing freelance writing and building side-projects in my spare time.</p>
+		</section>
+		
+		<section id="skills" class="clearfix" itemscope itemtype="http://schema.org/ItemList">
+			<h2 itemprop="name">Skillset</h2>
+			<section id="skills-left">
+				<h4 itemprop="about">Development</h4>
+				<ul>
+					<li itemprop="itemListElement">HTML5/CSS3</li>
+					<li itemprop="itemListElement">JavaScript &amp; jQuery</li>
+					<li itemprop="itemListElement">PHP Backend</li>
+					<li itemprop="itemListElement">SQL Databases</li>
+					<li itemprop="itemListElement">Wordpress</li>
+					<li itemprop="itemListElement">Pligg CMS</li>
+					<li itemprop="itemListElement">Some Objective-C</li>
+				</ul>
+			</section>
+			
+			<section id="skills-right">
+				<h4 itemprop="about">Software</h4>
+				<ul>
+					<li itemprop="itemListElement">Adobe Photoshop</li>
+					<li itemprop="itemListElement">Adobe Dreamweaver</li>
+					<li itemprop="itemListElement">MS Office 2007-2010</li>
+					<li itemprop="itemListElement">cPanel &amp; phpMyAdmin</li>
+					<li itemprop="itemListElement">Xcode 4</li>
+				</ul>
+			</section>
+		</section>
+		
+		<section id="education">
+			<h2>Past Education</h2>
+			<p><span itemprop="alumniOf">Hudson High School</span> graduate of 2009.</p>
+		</section>
+		
+		<section id="experience">
+			<h2>Work Experience</h2>
+			<p>Freelance Web Designer/Developer ~ 2007-2009</p>
+			<p>Best Buy - Geek Squad In-Store Agent ~ 2008-2009</p>
+			<p>Freelance Writer for <span itemprop="worksFor">Hongkiat.com</span> ~ 2011-Present</p>
+		</section>
+		
+		<section id="articles">
+			<h2>Recent Articles</h2>
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="http://www.hongkiat.com/blog/css-javascript-fallback-methods/" itemprop="url" title="10 Useful Fallback Methods For CSS And Javascript">10 Useful Fallback Methods For CSS And Javascript</a></span> &bull; Published in <span itemprop="datePublished">July 2012</span></p>
+			
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="http://www.hongkiat.com/blog/wordpress-url-rewrite/" itemprop="url" title="Rewriting URLs In WordPress: Tips And Plugins">Rewriting URLs In WordPress: Tips And Plugins</a></span> &bull; Published in <span itemprop="datePublished">July 2012</span></p>
+			
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="http://www.hongkiat.com/blog/jpeg-optimization-guide/" itemprop="url" title="JPEG Optimization For The Web – Ultimate Guide">JPEG Optimization For The Web – Ultimate Guide</a></span> &bull; Published in <span itemprop="datePublished">July 2012</span></p>
+			
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="http://www.hongkiat.com/blog/design-perfect-newsletter/" itemprop="url" title="9 Tricks To Design The Perfect HTML Newsletter">9 Tricks To Design The Perfect HTML Newsletter</a></span> &bull; Published in <span itemprop="datePublished">May 2012</span></p>
+			
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="http://www.hongkiat.com/blog/google-website-optimizer-ab-testing-guide/" itemprop="url" title="Guide To A/B Testing With Google Website Optimizer">Guide To A/B Testing With Google Website Optimizer</a></span> &bull; Published in <span itemprop="datePublished">March 2012</span></p>
+		</section>
 
-
-    <div id="header">
-        <h1>Laurie Reynolds</h1>
-        Bay Area, California<br>
-        <a  href = "http://www.linkedin.com/pub/laurie-reynolds/0/416/a04/">
-            <img id="linkedin-logo" src="http://press.linkedin.com/display-media/206/4" alt="http://press.linkedin.com/display-media/206/4"></a><br>
-            <a id="email-contact" href="mailto:laurie_reynolds@yahoo.com">laurie_reynolds@yahoo.com</a><br>
-    </div>
-
-    <div id="summary">
-        <H2>Summary</H2>
-        <div>
-        Interested in opportunities to contribute to designing and implementing engaging front end user experiences.
-        </div>
-        <br>
-        <div>
-        Over 20 years experience with diverse software projects on Windows Vista/XP, UNIX, and proprietary real-time system platforms. Specialties include user experience design, data conversions, image processing. Experienced in all phases of product lifecycle development, agile practices, with strong project lead skills.
-        </div>
-        <br>
-        <div>
-        2011 - Certified Scrum Master training with Agile Learning Labs
-        </div>
-        <br>
-        Strengths
-       
-        <ul>
-        <li>Strong focus on communication of priorities and roadmap to all team members and stakeholders </li>
-            <li>Adept at risk assessment and identifying mitigation approaches. </li>
-            <li>Continuous project evaluation for an accurate picture of outstanding work. </li>
-            <li>Creative/analytical design skills resulting in multi-faceted solution proposals. </li>
-            <li>Working closely with user community to develop overall definition, acceptance criteria, priorities and clear roadmap</li>
-        </ul>
-    </div>
-
-<div id="experience">
-
-<h2>
-Experience
-</h2>
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell">
-            <img src="https://media.licdn.com/media/p/5/005/03b/2e9/101d87b.png" alt="https://media.licdn.com/media/p/5/005/03b/2e9/101d87b.png">
-        </div>
-        <div class="table-cell">
-            <pre >December 2013 - Present
-                San Jose, CA</pre>
-        </div>
-
-        <div class="table-cell" >
-            <pre >Principal Software 
-                    Systems Requirements Engineer
-            </pre>
-        </div>
-    </div>
-</div>
-
-(TBD)
-
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell" >
-            <img src="https://media.licdn.com/media/p/6/000/2ca/32a/153f46b.png" alt="https://media.licdn.com/media/p/6/000/2ca/32a/153f46b.png">
-        </div>
-        <div class="table-cell" >
-            <pre>November 2011 - September 2013
-                South San Francisco, CA</pre>
-        </div>
-
-        <div class="table-cell" >
-                <pre style="font-family:Arial">Principal Scientific Programmer</pre>
-        </div>
-    </div>
-</div>
-(TBD)
-
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell" >
-            <img src="https://media.licdn.com/media/p/5/005/06f/1e8/3042477.png" alt="https://media.licdn.com/media/p/5/005/06f/1e8/3042477.png">
-        </div>
-        <div class="table-cell" >
-            <pre >December 2004 - November 2011
-                San Jose, CA</pre>
-        </div>
-
-        <div class="table-cell">
-            <pre >Lead Software Engineer</pre>
-        </div>
-    </div>
-</div>
-
-<ul>
-    <li>
-        ExactFinder - Project and hands on technical lead for a new qualitative and quantitative application for analyzing high resolution/accurate mass data from Thermo Fisher's Exactive mass spectrometer.
-    </li>
-
-    <li>
-        Pathfinder - Project and Technical Lead for a new qualitative application for analyzing high resolution/accurate mass data from the Exactive mass spectrometer for routine screening applications.
-    </li> 
-    <li>
-        LCquan -- Quantitation application that enables 21 CFR Part 11 compliance - Hands on project and technical lead of cross functional team developing new feature and bug fix releases. 
-    </li>
-    <li>
-        QuickQuan - Quantitation system for early drug discovery development. Hands on project and technical lead of cross functional team developing new feature and bug fix releases.
-    </li>
-</ul>
-<div class="tools-used">
-Windows XP, MFC, C++, Access, C#, Infragistics, WPF, WCF, Agile Development, SQLite
-</div>
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell" >
-            <img src="https://media.licdn.com/media/p/1/000/01c/1da/369dfc1.png" alt="https://media.licdn.com/media/p/1/000/01c/1da/369dfc1.png">
-        </div>
-        <div class="table-cell" >
-            <pre>May 1999 - December 2004
-                San Jose, CA</pre>
-        </div>
-
-        <div class="table-cell" >
-                <pre >Senior Software Engineer</pre>
-        </div>
-    </div>
-</div>
-<ul>
-    <li>
-        Medical Ultrasound User Interface System Controller. -- Project and Technical lead for multi-subsystem feature to implement dual display format of the ultrasound image. 
-    </li>
-    <li>
-        PerspectivePC product - Advanced image processing applications running on a NT PC embedded in the ultrasound machine which use DICOM protocols for image communications. 
-    </li>
-    <li>
-        DICOM Image/Clip Viewer: Designed and implemented standalone application to browse and review images and clips saved in DICOM format on the ultrasound machine. 
-    </li>
-    <li>
-        Technical Leadership: Initiated and facilitated weekly study session of Design Patterns and System Architecture. Gave seminars on UML and product software architecture
-    </li>
-</ul>
-<div class="tools-used">
-C++, Motif, Java, UML, Design Patterns, Data Conversion
-</div>
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell">
-            <pre >Knight Ridder Digital</pre>
-        </div>
-        <div class="table-cell" >
-            <pre>April 1997 - May 1999
-                San Jose, CA</pre>
-        </div>
-
-        <div class="table-cell">
-                <pre>Senior Software Engineer</pre>
-        </div>
-    </div>
-</div>
-
-Customer Content Management System-- Software architect and development responsibilities for online object-oriented customer and content (classified ads) database application. Provided data integration for online newspaper classifieds. Defined SGML Classifieds Interchange File Format (CIFF). Implemented Java tools for conversion and verification of CIFF feeds in Java. Maintained UML model using Rational Rose for the Java ObjectDesign application. 
-<div class="tools-used">
-Java, Object Design Libraries (ObjectStore database, UML, Design Patterns, Data Conversion
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell">
-            <img src="https://media.licdn.com/media/p/4/000/13f/085/1576abe.png" alt="https://media.licdn.com/media/p/4/000/13f/085/1576abe.png">
-        </div>
-        <div class="table-cell" >
-            <pre >October 1996 - June 1997
-                New York City, NY</pre>
-        </div>
-
-        <div class="table-cell">
-                <pre>Senior Software Engineer</pre>
-        </div>
-    </div>
-</div>
-
-
-The Wire: Developed C++/Illustra programs to process incoming news and image feeds for live updates to web pages. Developed Illustra Webblades for display of news briefs. Added image dropshadow functionality to Image Magick. Used Analog and Perl to generate daily Member statistics reports. 
-<div class="tools-used">
-C++, Illustra database, Image Processing, Data Conversion
-</div>
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell">
-            <img src="https://www.tudorfunds.com/media/logo.gif" alt="https://www.tudorfunds.com/media/logo.gif">
-        </div>
-        <div class="table-cell" >
-            <pre >April 1996 - October 1996
-                New York City, NY</pre>
-        </div>
-
-        <div class="table-cell" >
-                <pre >Senior Programmer Analyst</pre>
-        </div>
-    </div>
-</div>
-
-Futures and Options Commodity Data: Developed programs for daily download, verification, cross-checking and distribution of commodity data. 
-<div class="tools-used">
-C++, Sybase, Mathematical Analysis, Data Conversion
-</div>
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell" >
-            <pre>Knight Ridder Financial</pre>
-        </div>
-        <div class="table-cell">
-            <pre >July 1995 - April 1996
-                New York City, NY</pre>
-        </div>
-
-        <div class="table-cell" >
-            <pre >Senior Software Engineer</pre>
-        </div>
-    </div>
-</div>
-
-Money Center For UNIX -- Designed and implemented graph attribute classes and editing dialogs for a UNIX based financial graphing and data reporting package. Common generic application framework supported both UNIX and PC Windows versions.
-
-<div class="tools-used">
-C++, Motif, X-Windows, Design Patterns, User Interface Design
-</div>
-
-
-<div class="table" >
-    <div class="table-row">
-        <div class="table-cell">
-            <img src="https://media.licdn.com/media/p/7/005/03b/2c1/29777f5.png" alt="https://media.licdn.com/media/p/7/005/03b/2c1/29777f5.png">
-        </div>
-        <div class="table-cell">
-            <pre >June 1991 - July 1995
-                Montvale, NJ</pre>
-        </div>
-
-        <div class="table-cell">
-                <pre >Senior Software Engineer</pre>
-        </div>
-    </div>
-</div>
-<ul>
-    <li>
-        Cardiology Analysis Review System -- Member of a team that designed and implemented a cardiology imaging system. Sun SCSI digital image printer driver; RS-232 Device control libraries; image scaling and page formatting routines. 
-    </li>
-    <li>
-        Developer Toolkits -- Created PC and UNIX toolkits for image processing; file format conversion; SCSI and RS-232 device control. Toolkits used by international customers, customer service centers and QA department for product testing and verification. Provided integration expertise to customer's engineering groups.
-    </li>
-    <li>
-        Standards Representative -- ACR-NEMA - Working Group IV Compression and Adhoc group for Display Function Standard. 
-    </li>
-</ul>
-<div class="tools-used">
-    C, Motif, X-Windows, Image Processing, Data Conversion, SCSI, RS-232, User Interface Design, Mathematical Analysis
-</div>
-
-<div class="table">
-    <div class="table-row">
-        <div class="table-cell" >
-            <img src="https://media.licdn.com/media/p/6/005/06e/38b/15347f2.png" alt="https://media.licdn.com/media/p/6/005/06e/38b/15347f2.png">
-        </div>
-        <div class="table-cell">
-            <pre >January 1986 - June 1991
-                Paramus, NJ</pre>
-        </div>
-
-        <div class="table-cell" >
-                <pre >Senior Software Engineer</pre>
-        </div>
-    </div>
- </div>
- 
-    <ul>
-        <li>
-            Video Character </li>
-            <li> Member of a hardware/software team that created NTSC and PAL Broadcast graphics equipment. Created picture processing, anti-aliasing and edging algorithms for graphical displays. Devised and coded a keyboard driven user interface. Wrote data conversion and font security software. Created routines to convert line/arc fonts into run-length encoded format for raster display. Researched and implemented layouts for Foreign Language keyboards.
-            </li>
-            <li>
-                Weather Communications Package -- Responsible for design and implementation of weather communications package for video character generator K-series products. Wrote modem and printer drivers; palette and color ramping routines.
-            </li>
-        </ul>
-        <div class="tools-used">
-            C, Image Processing, Data Conversion, RS-232, User Interface Design, Mathematical Analysis
-        </div>
-</div>
-</div>
-    <div id="education">
-        <h2>
-            Education
-        </h2>
-        <br><br>
-        <ul>
-            <li>
-
-                M.S., Mathematics
-                1988 - 1991
-                Fairleigh Dickinson University
-
-            </li>
-            <li>
-                B.S., Computer Science
-                1982 - 1985
-                Fairleigh Dickinson University
-            </li>
-        </ul>
-    </div>
-
-
+	</div>
 </body>
-
 </html>
