@@ -47,7 +47,7 @@ $(document).ready(function() {
     }
 
     // Handle the add event
-    function handleAddEvent() {
+    function handleAddEvent(event) {
 
         event.preventDefault();
         // Get the item that the user typed in
@@ -130,16 +130,16 @@ $(document).ready(function() {
         $('#purchasedList').on('click', 'div.delete', deleteItem);
 
         // Add button
-        $("#addItemButton").on("click", function() {
+        $("#addItemButton").on("click", function(event) {
             event.preventDefault();
-            handleAddEvent();
+            handleAddEvent(event);
         });
 
         // Text input key handlers
         $("#itemField").keydown(function(event) {
             // Return key
             if (event.keyCode === 13) {
-                handleAddEvent();
+                handleAddEvent(event);
                 return false;
             }
         });
