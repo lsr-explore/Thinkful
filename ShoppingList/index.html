@@ -19,7 +19,7 @@
 
     <img src="images/shoppingcart.jpg"  >
 
-    <H1> Fill the Basket</H1>
+    <H1> Shopping List</H1>
     </div>
 </div>
 
@@ -39,7 +39,7 @@
         <div id="innerArea" class="inner-wrap">
             <div id="contentContainer">
 
-                <a class="left-off-canvas-toggle list" href="#" id="menuToggle">Menu</a>
+                <a class="left-off-canvas-toggle list" href="#" id="menuToggle">Options</a>
 
                 <!-- Off Canvas Menu -->
                 <aside  class="left-off-canvas-menu">
@@ -52,11 +52,14 @@
                         <hr>
                         </div>
                         <div id="menuOptions"   >
-                        Options (future)
+                        Options
                         <ul id="optionsList">
-                            <li>Save current list</li>
-                            <li>Manage categories</li>
-                            <li>Manage saved lists</li>
+                            <li class="optionsSelectable" id="clearTheList">Clear the list</li>
+                            <li class="optionsSelectable" id="loadTestList">Load a test list</li>
+                            <li class="optionsSelectable" id="demo">Demo</li>
+                            <li>Save current list (TBD)</li>
+                            <li>Manage categories (TBD)</li>
+                            <li>Manage saved lists(TBD)</li>
                         </ul>
                         </div>
                     </div>
@@ -64,8 +67,6 @@
 
 
                 <!-- main content goes here -->
-
-
                 <div id="shoppingContainer">&nbsp;
                     <div id="inputContainer">
                         <div id="enterItemContainer">
@@ -73,20 +74,23 @@
                                    placeholder="Enter item to buy" required/>
                         </div>
                         <div id="addItemContainer">
-                            <input type="submit" id="addItemButton" class="small round button"  value="Add"/>
+                            <input type="submit" id="addItemButton" class="small button"  value="Add"/>
                         </div>
                     </div>
-
+                    <hr>
                     <div id="listContainer">
-                        <h3 class="category">To Buy</h3>
+                        <div id="shoppingListArea">
+                        <h3 class="category">List</h3>
                         <ul id="shoppingList">
 
                         </ul>
-                        <h3 class="category">Purchased</h3>
+                        </div>
+                        <div id="purchasedListArea"  >
+                        <h3 class="category">Basket</h3>
                         <ul id="purchasedList">
 
-
                         </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -103,6 +107,25 @@
                 <span id="copyright">© Copyright - Golgi Studio</span>
             </div>
 </div>
+
+
+<ol class="joyride-list" data-joyride>
+    <li data-id="innerHeaderArea" data-text="Next" data-options="tip_location: top; prev_button: false">
+        <p>Hello and welcome to the Shopping List demo.</p>
+    </li>
+    <li data-id="itemField" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev">
+        <h4>Stop #1</h4>
+        <p>Type in an item to add to your list here</p>
+    </li>
+    <li data-id="addItemButton" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+        <h4>Stop #2</h4>
+        <p>Type [enter] or select the [Add] button to add it to the list</p>
+    </li>
+    <li data-button="End" data-prev-text="Prev">
+        <h4>Stop #3</h4>
+        <p>That's it!  So easy!</p>
+    </li>
+</ol>
 
 <!-- Need this so it won't display loading at the bottom of the page -->
 <div class='ui-loader ui-body-a ui-corner-all'><span class='ui-icon ui-icon-loading spin'></span><h1></h1></div>

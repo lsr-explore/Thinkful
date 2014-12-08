@@ -16,50 +16,34 @@
 **** Header
 *******************/
 #headerArea {
-
-
     width: 100%;
     height: 60px;
     top: 5px;
     position: fixed;
-
-
 }
 
 #innerHeaderArea {
-
-
-    width: 250px;
+    width: 400px;
     margin: 0 auto;
 
-
-    border: 2px solid;
-    border-radius: 25px;
-    background-color: white;
-    border-color: white;
-
+   /* border: 2px solid;
+    border-radius: 10px;
+    background-color: #4E5F63;
+    border-color: #4E5F63;  */
 }
 
 #innerHeaderArea img {
 
-
-    float: left;
-    width: 10%;
-    height: 10%;
-    margin: 5px;
-
-
+    float: right;
+    width: 8%;
+    height: 8%;
 }
 
 h1 {
-
-
     text-align: center;
-
-
-    font-size: 24pt;
-    color: Black;
-
+    font-weight: bold;
+    font-size: 30pt;
+    color: White;
 }
 
 /******************
@@ -77,8 +61,6 @@ h1 {
     right: 0;
     z-index: -10;
 
-
-    background-color: blue;
     background-image: url("../images/vegetable-section-store-small.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,34 +79,26 @@ h1 {
 
     border: 2px solid;
     border-radius: 25px;
-    border-color: black;
+    border-color: #4E5F63;
     opacity:0.5;
     filter:alpha(opacity=50);
     -moz-opacity:0.5;
-    background-color:black;
+    background-color:#4E5F63;
 
 }
 
-
-
-
 .category {
-
 
     color: white;
 }
 
 #menuToggle {
-
-
     color: white;
 }
 
 
 
 #optionsList {
-
-
     list-style: circle;
     color: white;
 }
@@ -200,10 +174,41 @@ h1 {
     float: left;
 }
 
+#shoppingListArea {
+    float: left;
+    width: 40%;
+}
+
+#purchasedListArea {
+    float: left;
+    width: 40%;
+    left-margin:  50%;
+}
+
+/***********************************
+************  Controls
+*******************************/
+
+#itemField {
+    background-color: #D0D6D8;
+    color: white;
+    height: 44px;
+}
+
+#addItemButton {
+    background-color: #85969A;
+
+}
+
+#addItemButton:hover {
+    background-color: #D0D6D8;
+
+}
+
 /* Shopping list lists */
 
 #listContainer {
-   clear:both;
+    display: block;
 
 }
 
@@ -214,41 +219,45 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -webkit-border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #D0D6D8;
+
     border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: palegoldenrod;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+
+    background: #D0D6D8;
+    -webkit-box-shadow: inset 0 0 6px rgb(0,0,0);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,0,0,0.4);
+    background: #D0D6D8;
 }
 
 ul#shoppingList {
     overflow-y: auto;
-    max-height: 200px;
+    overflow-x: hidden;
+    max-height: 500px;
     min-height: 100px;
-    width: 80%;
+    width: 90%;
     display: inline-block;
+    border: 2px solid white;
 
 }
 
 ul#purchasedList {
     overflow-y: auto;
-    max-height: 200px;
+    overflow-x: hidden;
+    max-height: 500px;
     min-height: 100px;
-    width: 80%;
+    width: 90%;
     display: inline-block;
+    border: 2px solid white;
 
+}
 
-
-
+.optionsSelectable {
+    cursor: pointer;
 }
 
 /*
@@ -256,14 +265,14 @@ Shopping and Purchased List items
 */
 .item {
 
-    width: 100%%;
+    width: 100%;
     font-size: 15pt;
 
     /* Colors and Styles */
     list-style: none;
     color:black;
 
-    background-color: palegoldenrod;
+    background-color: #c9cfd1;
     cursor: pointer;
 }
 
@@ -280,11 +289,14 @@ Shopping and Purchased List items
     background-image: url("../images/media-record-2x.png");
     background-repeat: no-repeat;
 
-
 }
 
 li span {
     margin-left: 10px;
+}
+
+#listContainer li:nth-child(odd) {
+    background: #D0D6D8;
 }
 
 .done {
@@ -294,7 +306,6 @@ li span {
     float: left;
     background-size: 55%;
     background-position: center;
-
 
     background-color: white;
     background-image: url("../images/circle-check-2x.png");
@@ -308,7 +319,8 @@ li span {
     background-size: 55%;
     background-position: center;
 
-    background-image: url("../images/trash-2x.png") ;
+    background-color: white;
+    background-image: url("../images/x-2x.png") ;
     background-repeat: no-repeat;
 
 }
@@ -325,7 +337,6 @@ li span {
     height: 50px;
     position: fixed;
 
-
     color: white;
     border-top-color: black;
 
@@ -337,8 +348,6 @@ li span {
     float: left;
     margin-top: 20px;
     margin-left: 20px;
-
-
     background-color: rgba(0,0,0,0.15);
 }
 

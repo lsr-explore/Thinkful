@@ -3,17 +3,18 @@
 //
 //********************************************************
 
-$(document).ready(function() {
-    "use strict";
+
 
     // Delete the closest list item up the DOM
     function deleteItem(){
+        "use strict";
         $(this).closest('li').remove();
     }
 
     // User mistakenly marked an item as purchased.  Let them undo it
     // Move an item from the purchasedList to the shoppingList
     function restoreItem(){
+        "use strict";
         $(this).closest('li').prependTo('#shoppingList');
         $(this).toggleClass("todo") ;
         $(this).toggleClass("done") ;
@@ -22,7 +23,8 @@ $(document).ready(function() {
     // Mark an item as purchased.
     // Move an item from the shoppingList to the purchasedList
     function markComplete(){
-        $(this).closest('li').appendTo('#purchasedList');
+        "use strict";
+        $(this).closest('li').prependTo('#purchasedList');
         $(this).toggleClass("todo") ;
         $(this).toggleClass("done") ;
     }
@@ -42,13 +44,14 @@ $(document).ready(function() {
     //      </div>
     // </li>
     function addItem(item ) {
+        "use strict";
         $('<li class="item"><div><div class="todo">&nbsp;</div><span>' + item + '</span><div class="delete">&nbsp;</div></div></li>').prependTo("#shoppingList");
         setFocus();
     }
 
     // Handle the add event
     function handleAddEvent(event) {
-
+        "use strict";
         event.preventDefault();
         // Get the item that the user typed in
         // It is is..
@@ -68,12 +71,28 @@ $(document).ready(function() {
 
     // Test function to add an item to the purchased list
     function addItemToPurchasedList(item ) {
-        $('<li class="item"><div><div class="done">&nbsp;</div><span>' + item + '</span><div class="delete">&nbsp;</div></div></li>').appendTo("#purchasedList");
+        "use strict";
+        $('<li class="item"><div><div class="done">&nbsp;</div><span>' + item + '</span><div class="delete">&nbsp;</div></div></li>').prependTo("#purchasedList");
         setFocus();
     }
 
     // Generate test data
+    function createEmptyLists(max) {
+        "use strict";
+        if (max === undefined) {
+            max = 15;
+        }
+
+        for (var i = 0; i < max; i++) {
+            addItem(" ");
+            addItemToPurchasedList(" ");
+        }
+    }
+
+    // Generate test data
     function generateTestData() {
+        "use strict";
+        clearTheList();
         addItem("milk");
         addItem("juice");
         addItem("apples");
@@ -90,14 +109,48 @@ $(document).ready(function() {
 
     // Clear the text input and give it focus
     function setFocus() {
+        "use strict";
         $('#itemField').val('');
         document.getElementById("itemField").focus();
+    }
+
+    function clearTheList() {
+
+        "use strict";
+        $("#shoppingList").empty();
+        $("#purchasedList").empty();
+        createEmptyLists();
+    }
+
+    function demo() {
+        "use strict";
+        $(document).foundation('joyride', 'start');
+    }
+
+    function handleOptionsSelection() {
+        "use strict";
+
+        switch (this.id) {
+            case "clearTheList":
+                clearTheList();
+                break;
+            case "loadTestList" :
+                generateTestData();
+                break;
+            case "demo" :
+                demo();
+                break;
+
+        }
     }
 
     //************************************
     // Main routine called at runtime
     //**************************************************
     function main() {
+
+        "use strict";
+
         // Initialize Foundation
         $(document).foundation().foundation('joyride' , 'start');
 
@@ -107,27 +160,35 @@ $(document).ready(function() {
             tolerance: 'touch'
         });
 
+        // Mark item as complete
+        shoppingList.on('click', 'div.todo', markComplete);
+
+        // Delete item from the shopping list
+        shoppingList.on('click', 'div.delete', deleteItem);
+
         var purchasedList = $("#purchasedList");
         purchasedList.sortable({
             tolerance: 'touch'
         });
+
+        // Restore an item incorrectly marked as purchased
+        purchasedList.on('click', 'div.done', restoreItem);
+
+        // Delete an item from the purchased list
+        purchasedList.on('click', 'div.delete', deleteItem);
 
         var item = $("#item");
         item.draggable({
             tolerance: 'touch'
         });
 
-        // Mark item as complete
-        $('#shoppingList').on('click', 'div.todo', markComplete);
+        createEmptyLists(15);
 
-        // Delete item from the shopping list
-        $('#shoppingList').on('click', 'div.delete', deleteItem);
+        var lis = document.getElementById("optionsList").getElementsByTagName('li');
 
-        // Restore an item incorrectly marked as purchased
-        $('#purchasedList').on('click', 'div.done', restoreItem);
-
-        // Delete an item from the purchased list
-        $('#purchasedList').on('click', 'div.delete', deleteItem);
+        for (var i=0; i<lis.length; i++) {
+            lis[i].addEventListener('click', handleOptionsSelection, false);
+        }
 
         // Add button
         $("#addItemButton").on("click", function(event) {
@@ -144,7 +205,8 @@ $(document).ready(function() {
             }
         });
     }
-
+$(document).ready(function() {
+    "use strict";
     // Main function
     main();
 
