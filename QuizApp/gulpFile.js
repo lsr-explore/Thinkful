@@ -1,5 +1,9 @@
 /**
  * Created by laurie on 12/24/2014.
+ *
+ *
+ * Recipes
+ * http://www.valdelama.com/useful-gulp-recipes
  */
 var gulp = require("gulp");
 var jshint = require("gulp-jshint");
@@ -13,55 +17,121 @@ var plato = require('gulp-plato');
 var jsdoc = require("gulp-jsdoc");
 var del = require("del");
 
-var foreach = require('gulp-foreach'); // https://www.npmjs.org/package/gulp-foreach
-var parsePath = require('parse-filepath'); // https://www.npmjs.org/package/parse-filepath
-var es = require('event-stream'); // https://www.npmjs.org/package/event-stream
-
 var w3cjs = require('gulp-w3cjs');
+var runSequence = require('run-sequence');
+var stylish = require('jshint-stylish');
+var notify = require('gulp-notify');
 
-gulp.task("default", ["testWithIstanbul", "complexity", "docs", "w3cjs"]);
+gulp.task("default", ["w3cjs", "lint", "runTests"]);
 
-gulp.task("publish",["clean-publish"], function() {
+
+gulp.task("checkQuality", ["cleanQuality"], function(callback) {
+    "use strict";
+
+	runSequence(
+				'docs',
+				'testWithIstanbul',
+				'runTests',
+              	'w3cjs',
+				'lint',
+				'complexity', // ToDo - why does this need to be at the end (an error is thrown)
+              callback);
+});
+
+// ToDo - getting errors when running with existing published site
+gulp.task("publish", ["cleanPublish"], function(callback) {
+    "use strict";
+
+	runSequence(
+              	'publishData',
+              	'publishLibs',
+              	'publishStyles',
+              	'publishHTML',
+				'publishScripts',
+              	'publishImages',
+              	callback);
+});
+
+gulp.task("publishMinifiedScripts", function() {
     "use strict";
 
     return gulp.src("source/scripts/*.js") // read all of the files that are in script/lib with a .js extension
-        .pipe(jshint()) // run their contents through jshint
-        .pipe(jshint.reporter("default")) // report any findings from jshint
-        .pipe(concat("quizApp.js")) // concatenate all of the file contents into a file titled 'all.js'
-        .pipe(gulp.dest("publish/scripts")) // write that file to the dist/js directory
+        .pipe(concat("quizApp.js" )) // concatenate all of the file contents into a file titled 'all.js'
+        .pipe(gulp.dest("publish/QuizApp/scripts")) // write that file to the dist/js directory
         .pipe(rename("quizApp.min.js")) // now rename the file in memory to 'all.min.js'
         .pipe(uglify()) // run uglify (for minification) on 'all.min.js'
-        .pipe(gulp.dest("publish/scripts")); // write all.min.js to the dist/js file
+        .pipe(gulp.dest("publish/QuizApp/scripts")); // write all.min.js to the dist/js file
 
 });
 
+gulp.task("publishData", function() {
+    "use strict";
+	return gulp.src([
+    	'source/data/**',
+	])
+	.pipe(gulp.dest('./publish/QuizApp/data'));
+});
+
+gulp.task("publishImages", function() {
+    "use strict";
+	return gulp.src([
+    	'source/images/**',
+	])
+	.pipe(gulp.dest('./publish/QuizApp/images'));
+});
+
+
+gulp.task("publishLibs", function() {
+    "use strict";
+	return gulp.src([
+    	'source/libs/**',
+	])
+	.pipe(gulp.dest('./publish/QuizApp/libs'));
+});
+
+gulp.task("publishStyles", function() {
+    "use strict";
+	return gulp.src([
+    	'source/styles/**',
+	])
+	.pipe(gulp.dest('./publish/QuizApp/styles'));
+});
+
+
+gulp.task("publishScripts", function() {
+    "use strict";
+	return gulp.src([
+    	'source/scripts/**',
+	])
+	.pipe(gulp.dest('./publish/QuizApp/scripts'));
+});
+
+gulp.task("publishHTML", function() {
+    "use strict";
+	return gulp.src([
+    	'source/*.html',
+	])
+	.pipe(gulp.dest('./publish/QuizApp'));
+});
 
 gulp.task("testWithIstanbul", function (cb) {
+    "use strict";
   gulp.src(["source/scripts/quizEngine.js"])
     .pipe(istanbul()) // Covering files
     .pipe(istanbul.hookRequire()) // Force `require` to return covered files
     .on('finish', function () {
       gulp.src(["tests/quizEngineTest.js"])
         .pipe(mocha())
-        .pipe(istanbul.writeReports('quality-report/coverage')) // Creating the reports after tests runned
+        .pipe(istanbul.writeReports('qualityReport/coverage')) // Creating the reports after tests runned
         .on('end', cb);
     });
 });
 
-function handleError(err) {
-  console.log("error: " + err.toString());
-  if (watching) {
-    this.emit('end');
-  } else {
-    // if you want to be really specific
-    process.exit(1);
-  }
-}
 
 gulp.task('complexity', function(){
     "use strict";
     return gulp.src('source/scripts/*.js')
-        .pipe(plato('quality-report/complexity', {
+        .pipe(plato('qualityReport/complexity', {
             jshint: {
                 options: {
                     strict: true
@@ -84,7 +154,7 @@ gulp.task("runTests", function () {
 gulp.task("docs", function() {
     "use strict";
     gulp.src("./source/scripts/*.js")
-  .pipe(jsdoc('./quality-report/documentation-output'))  
+  .pipe(jsdoc('./qualityReport/documentation-output'))  
 });
 
 gulp.task("w3cjs", function() {
@@ -93,23 +163,44 @@ gulp.task("w3cjs", function() {
         .pipe(w3cjs()); 
 });
 
-gulp.task("clean", function() {
+gulp.task('lint', function() {
+	"use strict";
+
+    gulp.src('./source/scripts/*.js')
+        .pipe(jshint('./source/scripts/.jshintrc.txt'))
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'))
+        .pipe(notify({
+            title: 'JSHint',
+            message: 'JSHint Passed. Let it fly!',
+        }))
+	.on('error', handleError);
+});
+
+gulp.task("cleanQuality", function() {
     "use strict";
     del([
-    	"quality-report/reports",
-    	"quality-report/documentation-output",
-    	"quality-report/coverage"
+    	"qualityReport/**",
 	]);
     
 });
 
-gulp.task("clean-publish", function() {
+gulp.task("cleanPublish", function() {
     "use strict";
 
     del([
-    	"publish/scripts/*.js"
+    	"publish/QuizApp/*/**"
 	]);
 });
-    
 
 
+function handleError(err) {
+    "use strict";
+  console.log("error: " + err.toString());
+  if (watching) {
+    this.emit('end');
+  } else {
+    // if you want to be really specific
+    process.exit(1);
+  }
+}
