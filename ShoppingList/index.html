@@ -4,131 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
     <title></title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css"/>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
     <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
+<div id="mainContainer" class="row">
 
+    <div class="large-12 small-10 columns">
 
-<div id="headerArea">
-    <div id="innerHeaderArea">
+        <div id="headerArea">
 
-    <img src="images/shoppingcart.jpg"  >
+            <img src="images/shoppingcart.jpg">
 
-    <H1> Shopping List</H1>
-    </div>
-</div>
+            <H1> Shopping List</H1>
+        </div>
 
-<div id="imgArea">
-   &nbsp;
-</div>
+        <div id="imgArea">
+            &nbsp;
+        </div>
 
+        <div id="appArea" class="off-canvas-wrap" data-offcanvas>
 
+            <div id="innerArea" class="inner-wrap">
 
+                <div class="large-12 small-10 columns">
 
-<div class="row" id="mainContainer">
+                    <div id="contentContainer" class="row">
 
-    <div id="overlay">    &nbsp;
-    </div>
-    <div id="appArea" class="off-canvas-wrap" data-offcanvas>
-
-        <div id="innerArea" class="inner-wrap">
-            <div id="contentContainer">
-
-                <a class="left-off-canvas-toggle list" href="#" id="menuToggle">Options</a>
-
-                <!-- Off Canvas Menu -->
-                <aside  class="left-off-canvas-menu">
-                    <div id="menuContainer">
-                        <div id="menuHeader">
-                        <!-- whatever you want goes here -->
-                        TBD - Instructions, menu items
-                        <br>   <br>
-                        Type "test" to load a test shopping list
-                        <hr>
-                        </div>
-                        <div id="menuOptions"   >
-                        Options
-                        <ul id="optionsList">
-                            <li class="optionsSelectable" id="clearTheList">Clear the list</li>
-                            <li class="optionsSelectable" id="loadTestList">Load a test list</li>
-                            <li class="optionsSelectable" id="demo">Demo</li>
-                            <li>Save current list (TBD)</li>
-                            <li>Manage categories (TBD)</li>
-                            <li>Manage saved lists(TBD)</li>
+                        <ul class="button-group">
+                            <li><a href="#" class="button left-off-canvas-toggle list">Options</a></li>
                         </ul>
-                        </div>
-                    </div>
-                </aside>
 
 
-                <!-- main content goes here -->
-                <div id="shoppingContainer">&nbsp;
-                    <div id="inputContainer">
-                        <div id="enterItemContainer">
-                            <input type="text" name="itemEntry" id="itemField" class="text" autocomplete="off"
-                                   placeholder="Enter item to buy" required/>
-                        </div>
-                        <div id="addItemContainer">
-                            <input type="submit" id="addItemButton" class="small button"  value="Add"/>
-                        </div>
-                    </div>
-                    <hr>
-                    <div id="listContainer">
-                        <div id="shoppingListArea">
-                        <h3 class="category">List</h3>
-                        <ul id="shoppingList">
+                        <!-- Off Canvas Menu -->
+                        <aside class="left-off-canvas-menu">
+                            <div id="menuContainer">
+                                <div id="menuHeader">
+                                    <!-- whatever you want goes here -->
+                                    TBD - Instructions, menu items
+                                    <br> <br>
+                                    Type "test" to load a test shopping list
+                                    <hr>
+                                </div>
+                                <div id="menuOptions">
+                                    Options
+                                    <ul id="optionsList">
+                                        <li class="optionsSelectable" id="clearTheList">Clear the list</li>
+                                        <li class="optionsSelectable" id="loadTestList">Load a test list</li>
+                                        <li class="optionsSelectable" id="demo">Demo</li>
+                                        <li>Save current list (TBD)</li>
+                                        <li>Manage categories (TBD)</li>
+                                        <li>Manage saved lists(TBD)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
 
-                        </ul>
-                        </div>
-                        <div id="purchasedListArea"  >
-                        <h3 class="category">Basket</h3>
-                        <ul id="purchasedList">
+                        <div class="radius panel">
+                            <!-- main content goes here -->
+                            <div class="row ">
+                                <div class="large-12 columns">
 
-                        </ul>
+
+                                    <form>
+                                        <div class="row collapse">
+
+                                            <div class="large-10 small-8 columns">
+                                                <input type="text" name="itemEntry" id="itemField" class="text"
+                                                       autocomplete="off"
+                                                       placeholder="Enter item to buy" required/>
+                                            </div>
+
+                                            <div class="large-2 small-3 columns">
+                                                <a href="#" class="postfix button expand" id="addItemButton">Add</a>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                            <div id="listContainer">
+
+                                <div class="row">
+                                    <div class="large-12 columns">
+
+                                        <div class="large-7 small-5 columns">
+                                            <h3 class="category">List</h3>
+                                            <ul id="shoppingList">
+
+                                            </ul>
+                                        </div>
+                                        <div class="large-5 small-4 columns">
+                                            <h3 class="category">Basket</h3>
+                                            <ul id="purchasedList">
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- close the off-canvas menu -->
+                        <a class="exit-off-canvas"></a>
                     </div>
                 </div>
-
-            <!-- close the off-canvas menu -->
-            <a class="exit-off-canvas"></a>
             </div>
         </div>
+        <footer class="row" id="footerArea">
+            <div class="large-12 columns">
+
+                <div class="row">
+                    <div class="large-6 columns" id="copyrightArea">
+
+                        <span id="copyright">© Copyright - Golgi Studio</span>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-</div>
 
-<div id="footerArea">
-            <div id="copyrightArea">
-                <span id="copyright">© Copyright - Golgi Studio</span>
-            </div>
 </div>
 
 
 <ol class="joyride-list" data-joyride>
-    <li data-id="innerHeaderArea" data-text="Next" data-options="tip_location: top; prev_button: false">
+    <li data-id="headerArea" data-text="Next" data-options="tip_location: top; prev_button: false">
         <p>Hello and welcome to the Shopping List demo.</p>
     </li>
     <li data-id="itemField" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev">
         <h4>Stop #1</h4>
+
         <p>Type in an item to add to your list here</p>
     </li>
-    <li data-id="addItemButton" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+    <li data-id="addItemButton" data-button="Next" data-prev-text="Prev"
+        data-options="tip_location:top;tip_animation:fade">
         <h4>Stop #2</h4>
+
         <p>Type [enter] or select the [Add] button to add it to the list</p>
     </li>
     <li data-button="End" data-prev-text="Prev">
         <h4>Stop #3</h4>
-        <p>That's it!  So easy!</p>
+
+        <p>That's it! So easy!</p>
     </li>
 </ol>
 
+<div id="duplicateDialog" class="reveal-modal" data-reveal>
+   <span></span>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
 <!-- Need this so it won't display loading at the bottom of the page -->
-<div class='ui-loader ui-body-a ui-corner-all'><span class='ui-icon ui-icon-loading spin'></span><h1></h1></div>
+<div class='ui-loader ui-body-a ui-corner-all'><span class='ui-icon ui-icon-loading spin'></span>
+
+    <h1></h1></div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -137,6 +175,8 @@
 <!--<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
 <script type="text/javascript" src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+<script src="http://cdn.foundation5.zurb.com/foundation/foundation.joyride.js"></script>
+<script src="js/vendor/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script>
 

@@ -4,6 +4,7 @@
 }
 ****************/
 
+
 /******************
 **** Common
 *******************/
@@ -12,38 +13,30 @@
     outline: none;
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
 /******************
 **** Header
 *******************/
 #headerArea {
-    width: 100%;
-    height: 60px;
+    width: 300px;
     top: 5px;
-    position: fixed;
-}
-
-#innerHeaderArea {
-    width: 400px;
     margin: 0 auto;
-
-   /* border: 2px solid;
-    border-radius: 10px;
-    background-color: #4E5F63;
-    border-color: #4E5F63;  */
 }
 
-#innerHeaderArea img {
-
-    float: right;
-    width: 8%;
-    height: 8%;
-}
-
-h1 {
-    text-align: center;
-    font-weight: bold;
+#headerArea h1   {
     font-size: 30pt;
-    color: White;
+    color: white;
+    display: inline;
+    vertical-align: middle;
+}
+#headerArea img    {
+    height: 10%;
+    width: 10%;
+    display: inline;
 }
 
 /******************
@@ -53,7 +46,7 @@ h1 {
 
     width: 100%;
     height: 100%;
-    overflow: hidden;
+
     position: fixed;
     top: 0;
     bottom: 0;
@@ -66,36 +59,34 @@ h1 {
     background-size: cover;
 }
 
-#overlay
+/*  Containers */
+#appArea
 {
-
-    z-index:-1;
-    position: fixed;
-    top: 100px;
-    bottom: 60px;
-    left:5%;
-    right: 5%;
-
-
-    border: 2px solid;
-    border-radius: 25px;
-    border-color: #4E5F63;
-    opacity:0.5;
-    filter:alpha(opacity=50);
-    -moz-opacity:0.5;
-    background-color:#4E5F63;
-
+    margin-top: 2px;
 }
 
-.category {
 
+/***************************
+* Slide out menu
+****************************/
+
+#innerArea {
+    color:black;
+}
+
+#menuContainer  {
     color: white;
 }
 
-#menuToggle {
-    color: white;
+#menuHeader {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
+#menuOptions {
+    color: white;
+    margin-left: 20px;
+}
 
 
 #optionsList {
@@ -103,162 +94,25 @@ h1 {
     color: white;
 }
 
-
-/*  Containers */
-#appArea
-{
-    position: fixed;
-    top: 100px;
-    bottom: 60px;
-    left: 5%;
-    right: 5%;
-}
-
-#innerArea {
-
-    color:white;
-
-}
-
-#contentContainer
-{
-
-
-    margin-top: 30px;
-    margin-left: 30px;
-
-
-}
-
-
-
-#shoppingContainer
-{
-    width: 100%;
-    height: 100%;
-
-
-}
-
-
-
-#menuContainer {
+#optionsList li {
     color: white;
-
-}
-
-#menuOptions {
-
-    margin-left: 20px;
-}
-
-#menuHeader {
-
-    margin-top: 20px;
-    margin-left: 20px;
-
-}
-
-#inputContainer {
-    width: 100%;
-}
-
-#enterItemContainer {
-    width: 40%;
-    float: left;
-}
-
-#addItemContainer {
-    margin-left: 20px;
-    width: 20%;
-    float: left;
-}
-
-#shoppingListArea {
-    float: left;
-    width: 40%;
-}
-
-#purchasedListArea {
-    float: left;
-    width: 40%;
-    left-margin:  50%;
-}
-
-/***********************************
-************  Controls
-*******************************/
-
-#itemField {
-    background-color: #D0D6D8;
-    color: white;
-    height: 44px;
-}
-
-#addItemButton {
-    background-color: #85969A;
-
-}
-
-#addItemButton:hover {
-    background-color: #D0D6D8;
-
-}
-
-/* Shopping list lists */
-
-#listContainer {
-    display: block;
-
-}
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #D0D6D8;
-
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-
-    background: #D0D6D8;
-    -webkit-box-shadow: inset 0 0 6px rgb(0,0,0);
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    background: #D0D6D8;
-}
-
-ul#shoppingList {
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 500px;
-    min-height: 100px;
-    width: 90%;
-    display: inline-block;
-    border: 2px solid white;
-
-}
-
-ul#purchasedList {
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 500px;
-    min-height: 100px;
-    width: 90%;
-    display: inline-block;
-    border: 2px solid white;
-
 }
 
 .optionsSelectable {
     cursor: pointer;
 }
+
+input[type=checkbox] {
+    /* All browsers except webkit*/
+    transform: scale(1.5);
+
+    /* Webkit browsers*/
+    -webkit-transform: scale(1.5);
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 
 /*
 Shopping and Purchased List items
@@ -272,57 +126,57 @@ Shopping and Purchased List items
     list-style: none;
     color:black;
 
-    background-color: #c9cfd1;
+    /* background-color: #2BA6CB;  */
+    background-color: #F2F2F2;
     cursor: pointer;
 }
 
-.todo {
-
-    width: 5%;
-    height: 100%;
-    float: left;
-    background-size: 55%;
-    background-position: center;
-
-
+.item:hover {
     background-color: white;
-    background-image: url("../images/media-record-2x.png");
-    background-repeat: no-repeat;
+}
+
+#shoppingList {
+    margin-left: 0;
+    border: 1px solid lightgrey;
+}
+
+#purchasedList {
+    margin-left: 0;
+    border: 1px solid lightgrey;
+}
+
+.done {
+
+   color: darkgrey;
 
 }
+
 
 li span {
     margin-left: 10px;
 }
 
 #listContainer li:nth-child(odd) {
-    background: #D0D6D8;
+    background-color: #DEDEDE;
 }
 
-.done {
+#listContainer li:nth-child(odd):hover {
+    background-color: white;
+}
 
+
+.delete {
     width: 5%;
     height: 100%;
     float: left;
     background-size: 55%;
     background-position: center;
-
-    background-color: white;
-    background-image: url("../images/circle-check-2x.png");
+    background-image: url("../images/x-2x.png") ;
     background-repeat: no-repeat;
 }
 
-.delete {
-    width: 5%;
-    height: 100%;
-    float: right;
-    background-size: 55%;
-    background-position: center;
-
-    background-color: white;
-    background-image: url("../images/x-2x.png") ;
-    background-repeat: no-repeat;
-
+.delete:hover {
+    background-color: rosybrown;
 }
 
 
@@ -331,25 +185,10 @@ li span {
 *******************/
 #footerArea {
 
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    position: fixed;
-
     color: white;
-    border-top-color: black;
-
+    background-color: darkgray;
 }
 
-#copyrightArea {
-
-    height: 100%;
-    float: left;
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: rgba(0,0,0,0.15);
-}
 
 
 

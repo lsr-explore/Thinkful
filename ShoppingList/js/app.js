@@ -8,25 +8,42 @@
     // Delete the closest list item up the DOM
     function deleteItem(){
         "use strict";
-        $(this).closest('li').remove();
+
+        var content = this.parentNode.children[2].textContent.trim();
+        if (content !== undefined && content.length > 0) {
+            $(this).closest('li').remove();
+        }
     }
 
     // User mistakenly marked an item as purchased.  Let them undo it
     // Move an item from the purchasedList to the shoppingList
     function restoreItem(){
         "use strict";
-        $(this).closest('li').prependTo('#shoppingList');
-        $(this).toggleClass("todo") ;
-        $(this).toggleClass("done") ;
+
+        var content = this.parentNode.children[2].textContent.trim();
+        if (content !== undefined && content.length > 0) {
+
+            $(this).closest('li').hide().prependTo('#shoppingList').slideDown('slow');
+            this.parentNode.className = "todo";
+            this.checked = false;
+
+        }
     }
 
     // Mark an item as purchased.
     // Move an item from the shoppingList to the purchasedList
-    function markComplete(){
+    function markComplete() {
         "use strict";
-        $(this).closest('li').prependTo('#purchasedList');
-        $(this).toggleClass("todo") ;
-        $(this).toggleClass("done") ;
+
+        var content = this.parentNode.children[2].textContent.trim();
+        if (content !== undefined && content.length > 0) {
+
+            $(this).closest('li').hide().prependTo('#purchasedList').slideDown('slow');
+            this.parentNode.className = "done";
+            this.checked = true;
+
+        }
+
     }
 
     // Add the item - include two divs:
@@ -45,7 +62,31 @@
     // </li>
     function addItem(item ) {
         "use strict";
-        $('<li class="item"><div><div class="todo">&nbsp;</div><span>' + item + '</span><div class="delete">&nbsp;</div></div></li>').prependTo("#shoppingList");
+
+        /*
+        var count = 0;
+        $("#shoppingList li").each(function(li) {
+            count++;
+            if(item === $(this).children[2].textContent)
+            {
+                $('#duplicateDialog span').innterText = item + "is already on the list";
+                $('#duplicateDialog').foundation('reveal', 'open');
+            }else
+            {
+                $('<li class="item"><div class="todo"><div class="delete">&nbsp;</div><input type="checkbox" ><span>' + item + '</span> </div></li>').hide().prependTo("#shoppingList").slideDown('slow');
+                setFocus();
+            }
+
+        });
+
+        //Nothing in the list - just add the item
+        if (count === 0) {
+            $('<li class="item"><div class="todo"><div class="delete">&nbsp;</div><input type="checkbox" ><span>' + item + '</span> </div></li>').hide().prependTo("#shoppingList").slideDown('slow');
+            setFocus();
+
+        }
+        */
+        $('<li class="item"><div class="todo"><div class="delete">&nbsp;</div><input type="checkbox" ><span>' + item + '</span> </div></li>').hide().prependTo("#shoppingList").slideDown('slow');
         setFocus();
     }
 
@@ -72,7 +113,7 @@
     // Test function to add an item to the purchased list
     function addItemToPurchasedList(item ) {
         "use strict";
-        $('<li class="item"><div><div class="done">&nbsp;</div><span>' + item + '</span><div class="delete">&nbsp;</div></div></li>').prependTo("#purchasedList");
+        $('<li class="item"><div class="done"><div class="delete">&nbsp;</div><input type="checkbox" checked><span>' + item + '</span></div></li>').hide().prependTo("#purchasedList").slideDown('slow');;
         setFocus();
     }
 
@@ -85,7 +126,6 @@
 
         for (var i = 0; i < max; i++) {
             addItem(" ");
-            addItemToPurchasedList(" ");
         }
     }
 
@@ -152,7 +192,7 @@
         "use strict";
 
         // Initialize Foundation
-        $(document).foundation().foundation('joyride' , 'start');
+        $(document).foundation();
 
         // Initialize jquery sortable/draggable items
         var shoppingList = $("#shoppingList");
@@ -161,7 +201,7 @@
         });
 
         // Mark item as complete
-        shoppingList.on('click', 'div.todo', markComplete);
+        shoppingList.on('change', 'input[type=checkbox]',markComplete );
 
         // Delete item from the shopping list
         shoppingList.on('click', 'div.delete', deleteItem);
@@ -172,10 +212,11 @@
         });
 
         // Restore an item incorrectly marked as purchased
-        purchasedList.on('click', 'div.done', restoreItem);
+        purchasedList.on('change', 'input[type=checkbox]',restoreItem );
 
         // Delete an item from the purchased list
         purchasedList.on('click', 'div.delete', deleteItem);
+
 
         var item = $("#item");
         item.draggable({
@@ -190,8 +231,7 @@
             lis[i].addEventListener('click', handleOptionsSelection, false);
         }
 
-        // Add button
-        $("#addItemButton").on("click", function(event) {
+        $("#addItemButton").click(function(event) {
             event.preventDefault();
             handleAddEvent(event);
         });
@@ -204,6 +244,9 @@
                 return false;
             }
         });
+
+
+
     }
 $(document).ready(function() {
     "use strict";

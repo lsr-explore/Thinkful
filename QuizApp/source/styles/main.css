@@ -1,0 +1,131 @@
+/*****************
+* {
+    outline: red 1px solid;
+}
+****************/
+
+
+/******************
+**** Common
+*******************/
+*:focus
+{
+    outline: none;
+}
+
+#quizTitle {
+    display: inline-block;
+    border: 2px solid darkgray;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.quizQuestionThumb,
+.quizThumb {
+    width: 100px;
+    height: 100px;
+}
+
+.quizChoice {
+    min-width: 100px;
+}
+
+.startQuiz {
+    margin-top: 20px;
+}
+
+#trackingArea {
+    display: inline-block;
+}
+
+.trackingElement {
+    display: inline-block;
+}
+
+#progress_circles {
+    padding: 0;
+    margin: 0;
+}
+
+#progress_circles li{
+    list-style: none;
+    display: inline-block;
+    background: #ccc;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#progress_circles li.wrong{
+    background: #fa160f;
+}
+
+#progress_circles li.correct{
+    background: #17fa23;
+}
+
+
+/* copied from cssdeck.com/labs/rounded-previous-and-next-arrows  */
+.pn-nav {
+    color: #878b8a;
+    display: inline-block;
+    font: normal bold 12pt Arial,sans-serif;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+    padding: 0.5em 1.5em;
+}
+
+#next { text-align: right }
+
+.pn-nav:before,
+.pn-nav:after {
+    background: #878b8a;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    border-radius: 0.25em;
+    content: "";
+    display: block;
+    height: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1em;
+}
+
+#prev:before,
+#prev:after { left: 0 }
+
+.pn-nav:before {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.pn-nav:after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#prev:after,
+#next:before { margin-top: -.36em }
+
+
+.pn-nav:hover:before,
+.pn-nav:hover:after,
+.pn-nav:focus:before,
+.pn-nav:focus:after{ background: #89c8cb
+}
+
+.pn-nav:hover,
+.pn-nav:focus {
+    color: #89c8cb
+}
