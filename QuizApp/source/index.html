@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
-    <title></title>
+    <title>QuizApp</title>
 
     <!-- Reset  -->
     <link rel="stylesheet" href="styles/reset.css">
@@ -15,10 +15,14 @@
     <!-- Quiz App files  -->
     <link rel="stylesheet" href="styles/main.css">
 
+    <header>
+        <H1>Select a quiz.... </H1>
+    </header>
 </head>
 <body>
 
 <div>
+
     <!-- This displays available quizzes  -->
     <!-- This is replaced with the template 'quizTemplate' below  -->
     <div id="quizSelection"></div>
@@ -44,7 +48,7 @@
     <div id="quizTitle">
             <img src={image} class="quizThumb"/>
     <br>
-    {name} <br>
+    {name} <br>  <br>
     {description} <br>
     <input type="submit" class="startQuiz" value="Start Quiz" id={id}>
     </div>

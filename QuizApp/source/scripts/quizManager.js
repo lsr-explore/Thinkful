@@ -141,13 +141,18 @@ function choiceSelected(event) {
     event.preventDefault();
     //event.currentTarget.id
 
+    var isCorrect;
+
     if (event.currentTarget.id === currentQuestionData.answer) {
-        alert("correct");
+        isCorrect = true;
+
         numRight++;
     } else {
-        alert ("wrong");
 
+        isCorrect = false;
     }
+    updateProgressCircle(currentQuestionData.answer, isCorrect) ;
+    showResult(isCorrect, event.currentTarget.id);
 
     answers[currentQuestionIndex] = event.currentTarget.id;
 
@@ -157,6 +162,73 @@ function choiceSelected(event) {
         alert("Quiz complete - you answered " + numRight + " questions out of " + numQuestions + " correctly");
     }   else {
         showQuestionByIndex(currentQuestionIndex) ;
+    }
+}
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+            break;
+        }
+    }
+}
+
+function showResult(isCorrect, answer) {
+
+    var titleText;
+
+    if (isCorrect) {
+        titleText = "Correct" ;
+    } else {
+        titleText = "Incorrect";
+    }
+
+    var innerHTML = "<p>" + answer + " is "  + titleText + "</p>";
+
+    var waitTime = 3000;
+
+    var statDialog = createDialog(waitTime, titleText);
+    statDialog.dialog("open");
+    statDialog.html(innerHTML);
+}
+
+function createDialog(waitTime, titleText) {
+    var statDialog =  $('#results').dialog({
+        resizable: false,
+        autoOpen: false,
+        show: "blind",
+        hide: "blind",
+        modal: true,
+        title: titleText,
+        dialogClass: 'results',
+        open: function (event, ui) {
+           setTimeout(function () {
+                $('#results').dialog('close');
+            }, waitTime);
+       }
+    });
+    return statDialog;
+}
+
+function updateProgressCircle(questionID, isCorrect) {
+
+    var className = "incorrect";
+    if (isCorrect) {
+        className = "correct";
+    }
+
+    selectorText = "#" + questionID + "progress";
+
+    $(selectorText).toggleClass(className);
+
+}
+
+function addProgressCircles(numQuestions) {
+
+    for (var i = 0; i < numQuestions; i++) {
+        var questionID = quizEngine.getQuestion(i).answer;
+        $("#progress_circles").append("<li id = \"" + questionID + "progress\">&nbsp;</li>");
     }
 }
 
@@ -183,7 +255,7 @@ function main() {
 
     answers = new Array(numQuestions);
 
-
+    addProgressCircles(numQuestions);
 
     // Event handler for start quiz button
     $("#prev").click(function (event) {

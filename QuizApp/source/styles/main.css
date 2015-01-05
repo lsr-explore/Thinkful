@@ -13,19 +13,72 @@
     outline: none;
 }
 
+h1 {
+    font-size: 32pt;
+}
+
+body {
+    background-color: darkgray;
+}
+
+#quizSelection {
+    margin-left: 5%;
+    margin-right: 5%;
+    vertical-align: middle;
+}
+
+#quizCard {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #ffffff;
+    margin-top: 20%;
+    width: 80%;
+}
+
+#questionArea {
+    width: 60%;
+    margin-left:20%;
+    margin-top: 20px;
+}
+
+#choiceArea {
+    margin-top: 20px;
+    margin-left: 20%;
+
+}
+
+#trackingArea {
+    margin-top: 20px;
+    margin-left: 20%;
+}
+
 #quizTitle {
     display: inline-block;
+    background-color: white;
     border: 2px solid darkgray;
     width: 200px;
-    height: 300px;
+    height: 350px;
     margin: 10px;
     text-align: center;
 }
 
+.quizChoiceControl {
+    width: 80%;
+    text-align: left;
+    height: 30px;
+    margin-top: 10px;
+    border:0 none;
+    cursor:pointer;
+}
+
+.quizChoiceControl:hover {
+    background-color: #c2c2c2
+}
+
 .quizQuestionThumb,
 .quizThumb {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .quizChoice {
@@ -58,7 +111,7 @@
     border-radius: 50%;
     margin-right: 10px;
 }
-#progress_circles li.wrong{
+#progress_circles li.incorrect{
     background: #fa160f;
 }
 
