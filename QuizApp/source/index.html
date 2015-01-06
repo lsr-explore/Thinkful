@@ -8,7 +8,8 @@
     <!-- Reset  -->
     <link rel="stylesheet" href="styles/reset.css">
     <!-- Font  -->
-    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
     <!-- Dependencies  -->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
 
@@ -25,7 +26,7 @@
 
     <!-- This displays available quizzes  -->
     <!-- This is replaced with the template 'quizTemplate' below  -->
-    <div id="quizSelection"></div>
+    <div id="quizSelection">&nbsp;</div>
 
 </div>
 
@@ -49,7 +50,7 @@
             <img src={image} class="quizThumb"/>
     <br>
     {name} <br>  <br>
-    {description} <br>
+    {description} <br>  <br>
     <input type="submit" class="startQuiz" value="Start Quiz" id={id}>
     </div>
 

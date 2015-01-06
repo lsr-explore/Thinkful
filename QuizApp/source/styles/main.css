@@ -8,50 +8,56 @@
 /******************
 **** Common
 *******************/
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
 *:focus
 {
     outline: none;
 }
 
-h1 {
-    font-size: 32pt;
+body {
+   /* background-color: darkgray;    */
+    background-image: url("../images/brushed-metal-background-original3-1024x948.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-body {
-    background-color: darkgray;
-}
+
+
+/***************
+** Index.html
+***************/
+ header {
+     margin-top: 10px;
+     margin-left: 20px;
+     margin-bottom: 20px;
+ }
+ H1 {
+     font-size: 36pt;
+ }
 
 #quizSelection {
-    margin-left: 5%;
-    margin-right: 5%;
+    text-align: center;
     vertical-align: middle;
+    margin: 10px;
+    height: 80%;
 }
 
-#quizCard {
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: #ffffff;
-    margin-top: 20%;
-    width: 80%;
+#quizSelection:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+
+    /* For visualization
+    background: #808080; width: 5px;
+    */
 }
 
-#questionArea {
-    width: 60%;
-    margin-left:20%;
-    margin-top: 20px;
-}
-
-#choiceArea {
-    margin-top: 20px;
-    margin-left: 20%;
-
-}
-
-#trackingArea {
-    margin-top: 20px;
-    margin-left: 20%;
-}
-
+/* quizTemplate elements */
 #quizTitle {
     display: inline-block;
     background-color: white;
@@ -60,6 +66,74 @@ body {
     height: 350px;
     margin: 10px;
     text-align: center;
+
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+
+}
+
+.quizThumb {
+    width: 200px;
+    height: 200px;
+}
+
+
+.startQuiz {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/************************
+*********  Quiz
+************************/
+
+#quizCard {
+    background-color: #ffffff;
+    margin-top: 20%;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+
+#questionArea {
+    text-align: center;
+}
+
+#choiceArea {
+    margin-top: 20px;
+}
+
+#trackingArea {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.trackingElement {
+    display: inline-block;
+}
+
+/** questionImageTemplate */
+
+#quizQuestionWithImage {
+    display: inline-block;
+}
+
+.quizCardThumb {
+    width: 200px;
+    height: 200px;
+}
+
+/** choiceTemplate */
+
+
+.quizChoice {
+    min-width: 100px;
 }
 
 .quizChoiceControl {
@@ -69,34 +143,51 @@ body {
     margin-top: 10px;
     border:0 none;
     cursor:pointer;
+    background-color: #ced4d5;
+    border-radius: 20px;
 }
 
 .quizChoiceControl:hover {
-    background-color: #c2c2c2
+    background-color: #c2c2c2 ;
 }
 
-.quizQuestionThumb,
-.quizThumb {
-    width: 200px;
-    height: 200px;
-}
 
-.quizChoice {
+/* choiceImageTemplate */
+
+#quizChoiceWithImage {
+    display: inline-block;
+    text-align: center;
     min-width: 100px;
 }
 
-.startQuiz {
-    margin-top: 20px;
+.imageChoiceControl {
+
+    min-height: 30px;
+    background-color: #ced4d5;
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 30px;
+
+
 }
 
-#trackingArea {
-    display: inline-block;
+.imageChoiceControl:hover {
+    background-color: #c2c2c2;
 }
 
-.trackingElement {
-    display: inline-block;
+.choiceThumb {
+    width: 80px;
+    height: 80px;
+    text-align: center;
 }
 
+
+
+
+/*** Progress dots - Begin */
 #progress_circles {
     padding: 0;
     margin: 0;
@@ -182,3 +273,8 @@ body {
 .pn-nav:focus {
     color: #89c8cb
 }
+
+/*** Progress dots - Done */
+
+
+

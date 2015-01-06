@@ -14,23 +14,29 @@
 
     <!-- Quiz App files  -->
     <link rel="stylesheet" href="styles/main.css">
+    <header>
+        <H1 id="quizCaption">Quiz</H1>
+    </header>
 
 </head>
 <body>
 
-<div id="quizCard">
+<div id="quizCard">&nbsp;
     <!-- This displays the question  -->
     <!-- This is replaced with the template 'questionTemplate' below  -->
     <div id="questionArea">
 
     </div>
+
     <!-- This displays answer choices  -->
     <!-- This is replaced with the template 'questionTemplate' below  -->
     <div id = "choiceArea">
 
     </div>
 
+
    <div id="trackingArea">
+       <hr>
        <div class="trackingElement">
        <a href="#" id="prev" class="pn-nav">Prev</a>
        </div>
@@ -43,9 +49,7 @@
        <a href="#" id="next" class="pn-nav">Next</a>
        </div>
    </div>
-    <div id="statsArea">
 
-    </div>
 
     <div id="results" title="Basic dialog">
 
@@ -70,8 +74,9 @@
 <script type="text/javascript" src="scripts/quizEngine.js"></script>
 <script type="text/javascript" src="scripts/quizManager.js"></script>
 <script type="text/javascript"  id="questionImageTemplate">
-    <div id="quizQuestion">
-            <img src={image} class="quizQuestionThumb"/>
+    <div id="quizQuestionWithImage">
+            <img src={image} class="quizCardThumb"/>
+            <br>
             <br>
             <div> {question} </div>
      </div>
@@ -93,10 +98,10 @@
 </script>
 <script type="text/javascript"  id="choiceImageTemplate">
     {#choices}
-    <div id="quizChoice">
-            <img src={image} class="quizQuestionThumb"/>
-            <input type="submit" class="quizChoiceControl" value="{description}" id={id}>
-            </div>
+    <div id="quizChoiceWithImage">
+            <img src={image} class="choiceThumb"/>
+            <input type="submit" class="imageChoiceControl" value="{description}" id={id}>
+    </div>
 
     {/choices}
 </script>

@@ -16,7 +16,7 @@ var availableQuizzes = {
             "order": 2,
             "image": "images/herbs/herb-poster.jpg",
             "name": "Herb Plants",
-            "description": "Can you identify what herbs these plants produce?",
+            "description": "Match the plant to the common cooking herb.",
             "id":  "herbs"
         }
     ]
