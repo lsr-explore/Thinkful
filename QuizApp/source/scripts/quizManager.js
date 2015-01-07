@@ -32,7 +32,7 @@ function initializeQuiz(id) {
 
 function showNextQuestion(event) {
     "use strict";
-    if (currentQuestionIndex <= (numQuestions - 1)) {
+    if (currentQuestionIndex <= (numQuestions - 2)) {
         lastQuestionID = currentQuestionData.answer;
         currentQuestionIndex ++;
         showQuestionByIndex(currentQuestionIndex);
