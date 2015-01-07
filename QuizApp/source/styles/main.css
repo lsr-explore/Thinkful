@@ -89,12 +89,12 @@ body {
 ************************/
 
 #quizCard {
-    background-color: #ffffff;
-    margin-top: 20%;
+    background-color: #ebebeb;
     width: 80%;
     margin-left: 10%;
     text-align: center;
     border-radius: 20px;
+    border: 2px solid darkgray;
 }
 
 
@@ -116,7 +116,9 @@ body {
 
 .trackingElement {
     display: inline-block;
+    vertical-align: middle;
 }
+
 
 /** questionImageTemplate */
 
@@ -125,9 +127,9 @@ body {
 }
 
 .quizCardThumb {
-    width: 300px;
+    width: 500px;
     height: 300px;
-
+    border: 2px solid darkgray;
 
 }
 
@@ -145,7 +147,7 @@ body {
 
 .quizChoiceControl {
     width: 80%;
-    text-align: left;
+    text-align: center;
     height: 30px;
     margin-top: 10px;
     border:0 none;
@@ -155,8 +157,10 @@ body {
 }
 
 .quizChoiceControl:hover {
-    background-color: #c2c2c2 ;
+    background-color: #ffe0b9;
+    border: 3px solid #ffb261;
 }
+
 
 
 /* choiceImageTemplate */
@@ -184,6 +188,7 @@ body {
 
 .imageChoiceControl:hover {
     background-color: #c2c2c2;
+    border: 3px solid #ffb261;
 }
 
 .choiceThumb {
@@ -280,12 +285,12 @@ body {
 .pn-nav:hover:before,
 .pn-nav:hover:after,
 .pn-nav:focus:before,
-.pn-nav:focus:after{ background: #89c8cb
+.pn-nav:focus:after{ background: #ffb261
 }
 
 .pn-nav:hover,
 .pn-nav:focus {
-    color: #89c8cb
+    color: #ffb261
 }
 
 /*** Progress dots - Done */
