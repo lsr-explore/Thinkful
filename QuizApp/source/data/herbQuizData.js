@@ -10,20 +10,16 @@ var herbQuiz = {
 
             {
                 "order": 1,
-                "image": "George_Washington_Bridge_from_New_Jersey-edit.jpg",
+                "image": "images/herbs/Basil.jpg",
                 "imageCitation":  "George Washington Bridge from New Jersey-edit by John O'Connell - originally posted to Flickr as George Washington Bridge from New Jersey. Licensed under CC BY 2.0 via Wikimedia Commons - http://commons.wikimedia.org/wiki/File:George_Washington_Bridge_from_New_Jersey-edit.jpg#mediaviewer/File:George_Washington_Bridge_from_New_Jersey-edit.jpg",
-                "answer" : "hardHats",
-                "question": "Which of the following is not true about the building of the Golden Gate Bridge?",
-                "choicesHaveImages": true,
+                "answer" : "basil",
+                "question": "This herb is a key ingredient for pesto",
+                "choicesHaveImages": false,
                 "references" :
                     [
                         {
-                            "text": "History - Six things you may not know about the Golden Gate",
-                            "link": "http://www.history.com/news/6-things-you-may-not-know-about-the-golden-gate-bridge"
-                        },
-                        {
-                            "text": "Golden Gate Bridge - hard hats",
-                            "link": "http://goldengatebridge.org/research/facts.php#hardhats"
+                            "text": "",
+                            "link": "http://www.foodnetwork.com/recipes/food-network-kitchens/basil-pesto-recipe2.html"
                         }
                     ],
 
@@ -31,8 +27,8 @@ var herbQuiz = {
                     [
 
                         {
-                            "id": "safetyNet",
-                            "description" : "A safety net saved more than a dozen lives during construction.",
+                            "id": "bay",
+                            "description" : "Bay Leaf",
                             "order": 1,
                             "imageCitation": "",
                             "image": ""
@@ -40,43 +36,42 @@ var herbQuiz = {
                         },
 
                         {
-                            "id": "fogHorns",
-                            "description" : "Fog horns are attached to the south tower pier.",
+                            "id": "thyme",
+                            "description" : "Thyme",
                             "order": 2,
                             "imageCitation": "",
                             "image": ""
                         },
 
                         {
-                            "id": "rivets",
-                            "description" : "There are over a million rivets between the two towers.",
+                            "id": "basil",
+                            "description" : "Basil",
                             "order": 3,
                             "imageCitation": "",
                             "image": ""
                         },
 
                         {
-                            "id": "hardHats",
-                            "description" : "Hard hats were not required during its construction in the late 1930's.",
+                            "id": "rosemary",
+                            "description" : "Rosemary",
                             "order": 4,
                             "imageCitation": "",
                             "image": ""
                         }
                     ]
             },
-
             {
                 "order": 2,
-                "image": "George_Washington_Bridge_from_New_Jersey-edit.jpg",
-                "imageCitation":  "George Washington Bridge from New Jersey-edit by John O'Connell - originally posted to Flickr as George Washington Bridge from New Jersey. Licensed under CC BY 2.0 via Wikimedia Commons - http://commons.wikimedia.org/wiki/File:George_Washington_Bridge_from_New_Jersey-edit.jpg#mediaviewer/File:George_Washington_Bridge_from_New_Jersey-edit.jpg",
-                "question": "Which president is this bridge that connects New Jersey and New York named after?",
-                "answer" : "georgeWashington",
-                "choicesHaveImages": true,
+                "image": "images/herbs/Rosemary_bush.jpg",
+                "imageCitation":  "",
+                "answer" : "rosemary",
+                "question": "This plant has needle like leaves and some varieties have small pale blue flowers",
+                "choicesHaveImages": false,
                 "references" :
                     [
                         {
-                            "test": "",
-                            "link": "http://www.panynj.gov/bridges-tunnels/gwb-history.html"
+                            "text": "",
+                            "link": "http://en.wikipedia.org/wiki/Rosemary"
                         }
                     ],
 
@@ -84,37 +79,92 @@ var herbQuiz = {
                     [
 
                         {
-                            "id": "georgeWashington",
-                            "description" : "George Washington.",
+                            "id": "bay",
+                            "description" : "Bay Leaf",
                             "order": 1,
                             "imageCitation": "",
                             "image": ""
+
                         },
 
                         {
-                            "id": "johnAdams",
-                            "description" : "John Adams",
+                            "id": "thyme",
+                            "description" : "Thyme",
                             "order": 2,
                             "imageCitation": "",
                             "image": ""
                         },
 
                         {
-                            "id": "johnKennedy",
-                            "description" : "John F. Kennedy",
+                            "id": "basil",
+                            "description" : "Basil",
                             "order": 3,
                             "imageCitation": "",
                             "image": ""
                         },
 
                         {
-                            "id": "woodrowWilson",
-                            "description" : "Woodrow Wilson",
+                            "id": "rosemary",
+                            "description" : "Rosemary",
+                            "order": 4,
+                            "imageCitation": "",
+                            "image": ""
+                        }
+                    ]
+            },
+            {
+                "order": 3,
+                "image": "images/herbs/Ornamental_Ginger.jpg",
+                "imageCitation":  "",
+                "answer" : "ginger",
+                "question": "Tea made this this herb is known to calm an upset stomach",
+                "choicesHaveImages": false,
+                "references" :
+                    [
+                        {
+                            "text": "",
+                            "link": "http://en.wikipedia.org/wiki/Ginger"
+                        }
+                    ],
+
+                "choices":
+                    [
+
+                        {
+                            "id": "bay",
+                            "description" : "Bay Leaf",
+                            "order": 1,
+                            "imageCitation": "",
+                            "image": ""
+
+                        },
+
+                        {
+                            "id": "ginger",
+                            "description" : "Ginger",
+                            "order": 2,
+                            "imageCitation": "",
+                            "image": ""
+                        },
+
+                        {
+                            "id": "clove",
+                            "description" : "Clove",
+                            "order": 3,
+                            "imageCitation": "",
+                            "image": ""
+                        },
+
+                        {
+                            "id": "turmeric",
+                            "description" : "Turmeric",
                             "order": 4,
                             "imageCitation": "",
                             "image": ""
                         }
                     ]
             }
+
+
         ]
 }

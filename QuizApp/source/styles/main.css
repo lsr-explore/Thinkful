@@ -125,8 +125,15 @@ body {
 }
 
 .quizCardThumb {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+
+
+}
+
+/** questionTemplate **/
+#quizQuestion {
+    font-size: 16pt;
 }
 
 /** choiceTemplate */
@@ -158,6 +165,7 @@ body {
     display: inline-block;
     text-align: center;
     min-width: 100px;
+    margin-top: 20px;
 }
 
 .imageChoiceControl {
@@ -179,9 +187,10 @@ body {
 }
 
 .choiceThumb {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     text-align: center;
+
 }
 
 
@@ -208,6 +217,11 @@ body {
 
 #progress_circles li.correct{
     background: #17fa23;
+}
+
+#progress_circles li.selected{
+    border: 2px solid #000000;;
+
 }
 
 

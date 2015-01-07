@@ -2,6 +2,7 @@
 
 
 var currentQuestionIndex = 0;
+var lastQuestionID;
 var quizEngine;
 var numQuestions = 0;
 var currentQuestionData;
@@ -32,6 +33,7 @@ function initializeQuiz(id) {
 function showNextQuestion(event) {
     "use strict";
     if (currentQuestionIndex <= (numQuestions - 1)) {
+        lastQuestionID = currentQuestionData.answer;
         currentQuestionIndex ++;
         showQuestionByIndex(currentQuestionIndex);
     }
@@ -40,6 +42,7 @@ function showNextQuestion(event) {
 function showPrevQuestion(event) {
     "use strict";
     if (currentQuestionIndex > 0 ) {
+        lastQuestionID = currentQuestionData.answer;
         currentQuestionIndex--;
         showQuestionByIndex(currentQuestionIndex);
     }
@@ -112,6 +115,14 @@ function showQuestionByIndex(index){
         choiceSelected(event);
     });
 
+    // Event handler for start quiz button
+    $(".imageChoiceControl").click(function (event) {
+        event.preventDefault();
+        choiceSelected(event);
+    });
+
+    showSelectedProgressCircle(lastQuestionID, currentQuestionData.answer);
+
 }
 
 // renderer for the compiled dust template
@@ -151,18 +162,27 @@ function choiceSelected(event) {
 
         isCorrect = false;
     }
-    updateProgressCircle(currentQuestionData.answer, isCorrect) ;
-    showResult(isCorrect, event.currentTarget.id);
+
+
+    var selectedChoiceText = "";
+
+    for (var i = 0 ; i < currentQuestionData.choices.length; i++) {
+
+        var choice = currentQuestionData.choices[i];
+        if (event.currentTarget.id === choice.id) {
+            selectedChoiceText = choice.description;
+        }
+    }
 
     answers[currentQuestionIndex] = event.currentTarget.id;
 
+    updateProgressCircle(currentQuestionData.answer, isCorrect, selectedChoiceText) ;
+
+    lastQuestionID = currentQuestionData.answer;
     currentQuestionIndex ++;
 
-    if (currentQuestionIndex === numQuestions)  {
-        alert("Quiz complete - you answered " + numRight + " questions out of " + numQuestions + " correctly");
-    }   else {
-        showQuestionByIndex(currentQuestionIndex) ;
-    }
+    showResult(isCorrect, selectedChoiceText);
+
 }
 
 function sleep(milliseconds) {
@@ -174,9 +194,28 @@ function sleep(milliseconds) {
     }
 }
 
+function quizComplete(numRight, numQuestions) {
+    var innerHTML = "You answered " + numRight + " questions out of " + numQuestions + " correctly";
+    var waitTime = 3000;
+    var statDialog = createDialog(waitTime, "Quiz complete");
+    statDialog.dialog("open");
+    statDialog.html(innerHTML);
+
+}
+
+function onDialogClose(event, ui) {
+
+    if (currentQuestionIndex === numQuestions)  {
+        quizComplete(numRight, numQuestions);
+    }   else {
+        showQuestionByIndex(currentQuestionIndex) ;
+    }
+}
+
 function showResult(isCorrect, answer) {
 
     var titleText;
+    var waitTime = 3000;
 
     if (isCorrect) {
         titleText = "Correct" ;
@@ -184,16 +223,14 @@ function showResult(isCorrect, answer) {
         titleText = "Incorrect";
     }
 
-    var innerHTML = "<p>" + answer + " is "  + titleText + "</p>";
+    var innerHTML = "You answered... <br><br> " + answer;
 
-    var waitTime = 3000;
-
-    var statDialog = createDialog(waitTime, titleText);
+    var statDialog = createDialogWithCloseEvent(waitTime, titleText);
     statDialog.dialog("open");
     statDialog.html(innerHTML);
 }
 
-function createDialog(waitTime, titleText) {
+function createDialogWithCloseEvent(waitTime, titleText) {
     var statDialog =  $('#results').dialog({
         resizable: false,
         autoOpen: false,
@@ -206,12 +243,50 @@ function createDialog(waitTime, titleText) {
            setTimeout(function () {
                 $('#results').dialog('close');
             }, waitTime);
+       },
+       close: function( event, ui ) {
+           onDialogClose(event, ui);
        }
+
     });
+
+
     return statDialog;
 }
 
-function updateProgressCircle(questionID, isCorrect) {
+function createDialog(waitTime, titleText) {
+    var statDialog =  $('#quizComplete').dialog({
+        resizable: false,
+        autoOpen: false,
+        show: "blind",
+        hide: "blind",
+        modal: true,
+        title: titleText,
+        dialogClass: 'quizComplete',
+        open: function (event, ui) {
+            setTimeout(function () {
+                $('#quizComplete').dialog('close');
+            }, waitTime);
+        }
+    });
+
+
+    return statDialog;
+}
+
+function showSelectedProgressCircle(previousQuestionId, questionID) {
+
+    if (previousQuestionId != undefined) {
+
+        previousCircle = "#" + previousQuestionId + "progress";
+        $(selectorText).toggleClass("selected");
+    }
+
+    selectorText = "#" + questionID + "progress";
+    $(selectorText).toggleClass("selected");
+}
+
+function updateProgressCircle(questionID, isCorrect, selectedChoiceText) {
 
     var className = "incorrect";
     if (isCorrect) {
@@ -221,6 +296,7 @@ function updateProgressCircle(questionID, isCorrect) {
     selectorText = "#" + questionID + "progress";
 
     $(selectorText).toggleClass(className);
+    $(selectorText).attr("title", "You selected: " + selectedChoiceText);
 
 }
 
@@ -251,6 +327,8 @@ function main() {
     // initialize the quiz for the selected quiz
     quizEngine = initializeQuiz(id);
 
+    $("#quizCaption").text(quizEngine.getTitle());
+
     numQuestions = quizEngine.numQuestions();
 
     answers = new Array(numQuestions);
@@ -268,6 +346,9 @@ function main() {
         event.preventDefault();
         showNextQuestion(event);
     });
+
+    lastQuestionID = undefined;
+    currentQuestionIndex = 0;
 
     showQuestionByIndex(0);
 }
