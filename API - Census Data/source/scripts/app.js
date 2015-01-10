@@ -8,9 +8,12 @@ function makeTheMap(state, svg, path) {
         .attr("class", "state")
         .attr("d", path)
         .on('mouseover', function(d) {
-            var abbreviation = d.properties.STATE_ABBR;
+            var abbreviation = d.id;
             return document.getElementById('name').innerHTML=abbreviation;
-        }) ;
+        }).
+        on('click', function ()   {
+              alert("state is selected");
+        });
 }
 
 function processRaceData(data) {
