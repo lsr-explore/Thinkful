@@ -1,0 +1,15 @@
+{"streets":{
+  "street":[{
+        "name": "Pine Street",
+        "type": "Pavement"
+},
+    {
+"name": "Spruce Street",
+        "type": "Dirt"
+        },
+    {
+    "name": "Oak Street",
+        "type": "Gravel"
+    }]
+}   
+}
